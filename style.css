@@ -1,0 +1,31 @@
+.countdown,
+.countdown-digits,
+.countdown-label {
+  display: flex;
+}
+.countdown,
+.countdown-label {
+  flex-direction: column;
+  align-items: center;
+}
+.countdown-label {
+  margin-top: 40px;
+  font-size: 72px;
+}
+.digit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.digit-number,
+.digit-separator {
+  font-size: 80px;
+}
+.digit-label {
+  font-size: 22px;
+}
+.countdown-label,
+.digit:nth-child(1) {
+  color: rgb(15, 178, 159);
+  font-weight: bold;
+}
