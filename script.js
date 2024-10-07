@@ -16,8 +16,8 @@ const cName = countdown.querySelector(".countdown-name");
 const cDate = countdown.querySelector(".countdown-date");
 
 let timeZones = [];
+let timeZonesFetched = false;
 
-let countryName = "Egypt";
 let countryCode = null;
 let timeZone = null;
 
@@ -28,14 +28,27 @@ let upcomingHolidayName = null;
 let upcomingHolidayTime = null;
 let holidays = null;
 
+let updateInterval = null;
+let fetchInterval = null;
+
 async function fetchTimeZones() {
+  if (timeZonesFetched) return;
   try {
     let response = await fetch("./countries.json");
     timeZones = await response.json();
+
+    let storedCountry = localStorage.getItem("selectedCountry");
+
     for (let i = 0; i < timeZones.length; i++) {
       let item = new DropdownItem(null, null, timeZones[i].countryName);
       countryDdn.addItem(item);
+
+      if (storedCountry && timeZones[i].countryName === storedCountry) {
+        countryDdn.selectItem(item);
+      }
     }
+
+    timeZonesFetched = true;
     console.log(timeZones);
   } catch (error) {
     console.error("Error fetching time zones data from API", error);
@@ -96,7 +109,9 @@ function toSeconds(milliseconds) {
 }
 
 async function updateCountry() {
-  let country = timeZones.find((c) => c.countryName === countryName);
+  let country = timeZones.find(
+    (c) => c.countryName === countryDdn.selected.name
+  );
   countryCode = country.countryCode;
   timeZone = country.timeZone;
 }
@@ -117,8 +132,7 @@ function updateCounter() {
   currTime += 1000;
 
   if (timeDiff <= 0) {
-    clearInterval(updateInterval);
-    clearInterval(fetchInterval);
+    clearIntervals();
     cDays.innerHTML = "00";
     cHours.innerHTML = "00";
     cMinutes.innerHTML = "00";
@@ -127,16 +141,22 @@ function updateCounter() {
   }
 }
 
-async function startCountdown() {
+async function clearIntervals() {
+  clearInterval(updateInterval);
+  clearInterval(fetchInterval);
+}
+
+export async function startCountdown() {
+  upcomingHoliday = null;
+  holidays = null;
   await fetchTimeZones();
   await updateCountry();
   await fetchTime();
   await fetchHolidays(currDate.getFullYear());
   updateCounter();
-
-  const updateInterval = setInterval(updateCounter, 1000);
-
-  const fetchInterval = setInterval(fetchTime, 600000);
+  await clearIntervals();
+  updateInterval = setInterval(updateCounter, 1000);
+  fetchInterval = setInterval(fetchTime, 600000);
 }
 
-startCountdown();
+fetchTimeZones();

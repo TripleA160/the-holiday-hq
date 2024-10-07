@@ -1,3 +1,5 @@
+import { startCountdown } from "./script.js";
+
 export class DropdownMenu {
   constructor(element = null) {
     if (element) {
@@ -76,17 +78,18 @@ export class DropdownMenu {
   selectItem(item) {
     if (this.selected) {
       if (this.selected === item) return;
-      else {
-        this.selected.element.classList.remove("selected");
-        this.selected = item;
-        item.element.classList.add("selected");
-        this.button.querySelector(".ddn-selected").innerText =
-          this.selected.name;
-      }
+      this.selected.element.classList.remove("selected");
+      this.selected = item;
+      item.element.classList.add("selected");
+      this.button.querySelector(".ddn-selected").innerText = this.selected.name;
+      localStorage.setItem("selectedCountry", this.selected.name);
+      startCountdown();
     } else {
       this.selected = item;
       item.element.classList.add("selected");
       this.button.querySelector(".ddn-selected").innerText = this.selected.name;
+      localStorage.setItem("selectedCountry", this.selected.name);
+      startCountdown();
     }
   }
 }
