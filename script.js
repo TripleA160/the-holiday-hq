@@ -1,9 +1,13 @@
 /*
-=> Add a dropdown menu for countries
 => Find a way to deal with countries with multiple time zones
 */
 
-const countdown = document.querySelector(".countdown");
+import { DropdownMenu, DropdownItem } from "./dropdown.js";
+
+const header = document.querySelector("#header");
+const content = document.querySelector("#content");
+const countryDdn = new DropdownMenu(header.querySelector("#country-ddn"));
+const countdown = content.querySelector(".countdown");
 const cDays = countdown.querySelector(".digit-days");
 const cHours = countdown.querySelector(".digit-hours");
 const cMinutes = countdown.querySelector(".digit-minutes");
@@ -28,6 +32,10 @@ async function fetchTimeZones() {
   try {
     let response = await fetch("./countries.json");
     timeZones = await response.json();
+    for (let i = 0; i < timeZones.length; i++) {
+      let item = new DropdownItem(null, null, timeZones[i].countryName);
+      countryDdn.addItem(item);
+    }
     console.log(timeZones);
   } catch (error) {
     console.error("Error fetching time zones data from API", error);

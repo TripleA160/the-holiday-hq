@@ -1,3 +1,64 @@
+:root {
+  --bg-first: #ffffff;
+  --bg-second: #eeeeee;
+  --bg-third: #dddddd;
+}
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+.ddn {
+  position: relative;
+}
+.ddn-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 40px;
+  padding: 0.6em;
+  font: inherit;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: var(--bg-third);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.ddn-icon {
+  position: relative;
+}
+.ddn-icon i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.ddn-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: var(--bg-second);
+  border-radius: 6px;
+  font-size: 17px;
+  max-height: 400px;
+  overflow-y: auto;
+  cursor: pointer;
+}
+.ddn-item {
+  display: flex;
+  padding: 0.6em;
+  user-select: none;
+}
+.ddn-item.selected {
+  background-color: var(--bg-third);
+}
+
 .countdown,
 .countdown-digits,
 .countdown-label {
