@@ -1,12 +1,20 @@
 /*
-=> Find a way to deal with countries with multiple time zones
+=> Add css transitions
+=> Add a list of all hollidays
 */
 
 import { DropdownMenu, DropdownItem } from "./dropdown.js";
 
 const header = document.querySelector("#header");
 const content = document.querySelector("#content");
-const countryDdn = new DropdownMenu(header.querySelector("#country-ddn"));
+const countryDdn = new DropdownMenu(
+  content.querySelector("#country-ddn"),
+  handleCountrySelection
+);
+const timeZoneDdn = new DropdownMenu(
+  content.querySelector("#time-zone-ddn"),
+  handleTimeZoneSelection
+);
 const countdown = content.querySelector(".countdown");
 const cDays = countdown.querySelector(".digit-days");
 const cHours = countdown.querySelector(".digit-hours");
@@ -15,8 +23,8 @@ const cSeconds = countdown.querySelector(".digit-seconds");
 const cName = countdown.querySelector(".countdown-name");
 const cDate = countdown.querySelector(".countdown-date");
 
-let timeZones = [];
-let timeZonesFetched = false;
+let countries = [];
+let countriesFetched = false;
 
 let countryCode = null;
 let timeZone = null;
@@ -27,38 +35,37 @@ let upcomingHoliday = null;
 let upcomingHolidayName = null;
 let upcomingHolidayTime = null;
 let holidays = null;
+let offset = 0;
 
 let updateInterval = null;
 let fetchInterval = null;
 
-async function fetchTimeZones() {
-  if (timeZonesFetched) return;
+async function fetchCountries() {
+  if (countriesFetched) return;
   try {
     let response = await fetch("./countries.json");
-    timeZones = await response.json();
+    countries = await response.json();
+    countries.sort((a, b) => {
+      let aN = a.countryName.toLowerCase();
+      let bN = b.countryName.toLowerCase();
+      if (aN < bN) return -1;
+      if (bN > aN) return 1;
+      return 0;
+    });
+    countriesFetched = true;
 
-    let storedCountry = localStorage.getItem("selectedCountry");
+    await updateCountryDropdown();
 
-    for (let i = 0; i < timeZones.length; i++) {
-      let item = new DropdownItem(null, null, timeZones[i].countryName);
-      countryDdn.addItem(item);
-
-      if (storedCountry && timeZones[i].countryName === storedCountry) {
-        countryDdn.selectItem(item);
-      }
-    }
-
-    timeZonesFetched = true;
-    console.log(timeZones);
+    console.log(countries);
   } catch (error) {
     console.error("Error fetching time zones data from API", error);
   }
 }
 
-async function fetchHolidays(year, maxYear = 2040) {
+async function fetchHolidays(year, lastYear = 2040) {
   try {
     let yearNum = parseInt(year);
-    while (!upcomingHoliday && yearNum < maxYear) {
+    while (!upcomingHoliday && yearNum < lastYear) {
       let response = await fetch(
         `https://date.nager.at/api/v3/PublicHolidays/${yearNum}/${countryCode}`
       );
@@ -70,8 +77,10 @@ async function fetchHolidays(year, maxYear = 2040) {
         }
       }
       if (upcomingHoliday) {
+        let date = upcomingHoliday.date.split("-");
         upcomingHolidayName = upcomingHoliday.localName;
-        upcomingHolidayTime = new Date(upcomingHoliday.date).getTime();
+        upcomingHolidayTime =
+          Date.UTC(date[0], date[1] - 1, date[2], 0, 0, 0) - offset;
         cName.innerHTML = upcomingHolidayName;
         cDate.innerHTML = `(${upcomingHoliday.date.replaceAll("-", "/")})`;
         console.log(holidays);
@@ -109,11 +118,66 @@ function toSeconds(milliseconds) {
 }
 
 async function updateCountry() {
-  let country = timeZones.find(
+  let selectedCountry = countries.find(
     (c) => c.countryName === countryDdn.selected.name
   );
-  countryCode = country.countryCode;
-  timeZone = country.timeZone;
+  let selectedTimeZone = timeZoneDdn.selected.name;
+
+  countryCode = selectedCountry.countryCode;
+
+  timeZone = selectedTimeZone.split(" ")[0];
+
+  let offsetSign = selectedTimeZone.split("UTC")[1][1];
+  let offsetHours = parseInt(selectedTimeZone.split("UTC")[1].split(":")[0]);
+  let offsetMinutes = parseInt(selectedTimeZone.split("UTC")[1].split(":")[1]);
+  offset = (offsetHours * 60 + offsetMinutes) * 60 * 1000;
+  if (offsetSign === "-") offset = -offset;
+}
+
+async function updateCountryDropdown() {
+  let storedCountry = localStorage.getItem("selectedCountry");
+
+  countryDdn.clear();
+
+  for (let i = 0; i < countries.length; i++) {
+    let countryItem = new DropdownItem(null, null, countries[i].countryName);
+
+    countryDdn.addItem(countryItem);
+
+    if (storedCountry && countries[i].countryName === storedCountry)
+      countryDdn.selectItem(countryItem);
+  }
+
+  if (!countryDdn.selected) countryDdn.selectItem(countryDdn.items[0]);
+}
+
+let firstUpdate = true;
+async function updateTimeZoneDropdown() {
+  let storedTimeZone = localStorage.getItem("selectedTimeZone");
+
+  let selectedCountry = countries.find(
+    (c) => c.countryName === countryDdn.selected.name
+  );
+  if (!selectedCountry) return;
+
+  let timeZones = selectedCountry.timeZones;
+  let offsets = selectedCountry.offsets;
+
+  timeZoneDdn.clear();
+
+  for (let i = 0; i < timeZones.length; i++) {
+    let timeZoneName = `${timeZones[i]} ${offsets[i]}`;
+    let timeZoneItem = new DropdownItem(null, null, timeZoneName);
+
+    timeZoneDdn.addItem(timeZoneItem);
+
+    if (firstUpdate && storedTimeZone && timeZoneName === storedTimeZone)
+      timeZoneDdn.selectItem(timeZoneItem);
+  }
+
+  if (!timeZoneDdn.selected) timeZoneDdn.selectItem(timeZoneDdn.items[0]);
+
+  firstUpdate = false;
 }
 
 function updateCounter() {
@@ -139,6 +203,11 @@ function updateCounter() {
     cSeconds.innerHTML = "00";
     alert("It's holiday time!");
   }
+  console.log("Current Time (currTime): ", new Date(currTime).toISOString());
+  console.log(
+    "Holiday Time (upcomingHolidayTime): ",
+    new Date(upcomingHolidayTime).toISOString()
+  );
 }
 
 async function clearIntervals() {
@@ -146,17 +215,34 @@ async function clearIntervals() {
   clearInterval(fetchInterval);
 }
 
-export async function startCountdown() {
+async function startCountdown() {
   upcomingHoliday = null;
   holidays = null;
-  await fetchTimeZones();
+  await fetchCountries();
   await updateCountry();
   await fetchTime();
   await fetchHolidays(currDate.getFullYear());
-  updateCounter();
   await clearIntervals();
+  updateCounter();
   updateInterval = setInterval(updateCounter, 1000);
   fetchInterval = setInterval(fetchTime, 600000);
 }
 
-fetchTimeZones();
+async function handleCountrySelection() {
+  countryDdn.selected?.name
+    ? localStorage.setItem("selectedCountry", countryDdn.selected.name)
+    : localStorage.setItem("selectedCountry", "None");
+
+  await updateTimeZoneDropdown();
+  timeZoneDdn.selectItem(timeZoneDdn.items[0]);
+  await startCountdown();
+}
+async function handleTimeZoneSelection() {
+  timeZoneDdn.selected?.name
+    ? localStorage.setItem("selectedTimeZone", timeZoneDdn.selected.name)
+    : localStorage.setItem("selectedTimeZone", "None");
+
+  await startCountdown();
+}
+
+fetchCountries();

@@ -2,571 +2,1229 @@
     {
         "countryName": "Albania",
         "countryCode": "AL",
-        "timeZone": "Europe/Tirane"
+        "timeZones": [
+            "Europe/Tirane"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Andorra",
         "countryCode": "AD",
-        "timeZone": "Europe/Andorra"
+        "timeZones": [
+            "Europe/Andorra"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Argentina",
         "countryCode": "AR",
-        "timeZone": "multi"
+        "timeZones": [
+            "America/Argentina/Buenos_Aires"
+        ],
+        "offsets": [
+            "UTC -03:00"
+        ]
     },
     {
         "countryName": "Armenia",
         "countryCode": "AM",
-        "timeZone": "Asia/Yerevan"
+        "timeZones": [
+            "Asia/Yerevan"
+        ],
+        "offsets": [
+            "UTC +04:00"
+        ]
     },
     {
         "countryName": "Australia",
         "countryCode": "AU",
-        "timeZone": "multi"
+        "timeZones": [
+            "Australia/Perth",
+            "Australia/Eucla",
+            "Australia/Darwin",
+            "Australia/Brisbane",
+            "Australia/Adelaide",
+            "Australia/Sydney"
+        ],
+        "offsets": [
+            "UTC +08:00",
+            "UTC +08:45",
+            "UTC +09:30",
+            "UTC +10:00",
+            "UTC +10:30",
+            "UTC +11:00"
+        ]
     },
     {
         "countryName": "Austria",
         "countryCode": "AT",
-        "timeZone": "Europe/Vienna"
+        "timeZones": [
+            "Europe/Vienna"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Bahamas",
         "countryCode": "BS",
-        "timeZone": "America/Nassau"
+        "timeZones": [
+            "America/Nassau"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Barbados",
         "countryCode": "BB",
-        "timeZone": "America/Barbados"
+        "timeZones": [
+            "America/Barbados"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Belarus",
         "countryCode": "BY",
-        "timeZone": "Europe/Minsk"
+        "timeZones": [
+            "Europe/Minsk"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Belgium",
         "countryCode": "BE",
-        "timeZone": "Europe/Brussels"
+        "timeZones": [
+            "Europe/Brussels"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Belize",
         "countryCode": "BZ",
-        "timeZone": "America/Belize"
+        "timeZones": [
+            "America/Belize"
+        ],
+        "offsets": [
+            "UTC -06:00"
+        ]
     },
     {
         "countryName": "Benin",
         "countryCode": "BJ",
-        "timeZone": "Africa/Porto-Novo"
+        "timeZones": [
+            "Africa/Porto-Novo"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Bolivia",
         "countryCode": "BO",
-        "timeZone": "America/La_Paz"
+        "timeZones": [
+            "America/La_Paz"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Bosnia and Herzegovina",
         "countryCode": "BA",
-        "timeZone": "Europe/Sarajevo"
+        "timeZones": [
+            "Europe/Sarajevo"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Botswana",
         "countryCode": "BW",
-        "timeZone": "Africa/Gaborone"
+        "timeZones": [
+            "Africa/Gaborone"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Brazil",
         "countryCode": "BR",
-        "timeZone": "multi"
+        "timeZones": [
+            "America/Rio_Branco",
+            "America/Manaus",
+            "America/Araguaina",
+            "America/Noronha"
+        ],
+        "offsets": [
+            "UTC -05:00",
+            "UTC -04:00",
+            "UTC -03:00",
+            "UTC -02:00"
+        ]
     },
     {
         "countryName": "Bulgaria",
         "countryCode": "BG",
-        "timeZone": "Europe/Sofia"
+        "timeZones": [
+            "Europe/Sofia"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Canada",
         "countryCode": "CA",
-        "timeZone": "multi"
+        "timeZones": [
+            "America/Vancouver",
+            "America/Inuvik",
+            "America/Atikokan",
+            "America/Toronto",
+            "America/Halifax",
+            "America/St_Johns"
+        ],
+        "offsets": [
+            "UTC -07:00",
+            "UTC -06:00",
+            "UTC -05:00",
+            "UTC -04:00",
+            "UTC -03:00",
+            "UTC -02:30"
+        ]
     },
     {
         "countryName": "Chile",
         "countryCode": "CL",
-        "timeZone": "multi"
+        "timeZones": [
+            "Pacific/Easter",
+            "America/Santiago"
+        ],
+        "offsets": [
+            "UTC -05:00",
+            "UTC -03:00"
+        ]
     },
     {
         "countryName": "China",
         "countryCode": "CN",
-        "timeZone": "multi"
+        "timeZones": [
+            "Asia/Urumqi",
+            "Asia/Shanghai"
+        ],
+        "offsets": [
+            "UTC +06:00",
+            "UTC +08:00"
+        ]
     },
     {
         "countryName": "Colombia",
         "countryCode": "CO",
-        "timeZone": "America/Bogota"
+        "timeZones": [
+            "America/Bogota"
+        ],
+        "offsets": [
+            "UTC -05:00"
+        ]
     },
     {
         "countryName": "Costa Rica",
         "countryCode": "CR",
-        "timeZone": "America/Costa_Rica"
+        "timeZones": [
+            "America/Costa_Rica"
+        ],
+        "offsets": [
+            "UTC -06:00"
+        ]
     },
     {
         "countryName": "Croatia",
         "countryCode": "HR",
-        "timeZone": "Europe/Zagreb"
+        "timeZones": [
+            "Europe/Zagreb"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Cuba",
         "countryCode": "CU",
-        "timeZone": "America/Havana"
+        "timeZones": [
+            "America/Havana"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Cyprus",
         "countryCode": "CY",
-        "timeZone": "multi"
+        "timeZones": [
+            "Asia/Nicosia"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Czechia",
         "countryCode": "CZ",
-        "timeZone": "Europe/Prague"
+        "timeZones": [
+            "Europe/Prague"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Denmark",
         "countryCode": "DK",
-        "timeZone": "Europe/Copenhagen"
+        "timeZones": [
+            "Europe/Copenhagen"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Dominican Republic",
         "countryCode": "DO",
-        "timeZone": "America/Santo_Domingo"
+        "timeZones": [
+            "America/Santo_Domingo"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Ecuador",
         "countryCode": "EC",
-        "timeZone": "multi"
+        "timeZones": [
+            "Pacific/Galapagos",
+            "America/Guayaquil"
+        ],
+        "offsets": [
+            "UTC -06:00",
+            "UTC -05:00"
+        ]
     },
     {
         "countryName": "Egypt",
         "countryCode": "EG",
-        "timeZone": "Africa/Cairo"
+        "timeZones": [
+            "Africa/Cairo"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "El Salvador",
         "countryCode": "SV",
-        "timeZone": "America/El_Salvador"
+        "timeZones": [
+            "America/El_Salvador"
+        ],
+        "offsets": [
+            "UTC -06:00"
+        ]
     },
     {
         "countryName": "Estonia",
         "countryCode": "EE",
-        "timeZone": "Europe/Tallinn"
+        "timeZones": [
+            "Europe/Tallinn"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Faroe Islands",
         "countryCode": "FO",
-        "timeZone": "Atlantic/Faroe"
+        "timeZones": [
+            "Atlantic/Faroe"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Finland",
         "countryCode": "FI",
-        "timeZone": "Europe/Helsinki"
+        "timeZones": [
+            "Europe/Helsinki"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "France",
         "countryCode": "FR",
-        "timeZone": "Europe/Paris"
+        "timeZones": [
+            "Europe/Paris"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Gabon",
         "countryCode": "GA",
-        "timeZone": "Africa/Libreville"
+        "timeZones": [
+            "Africa/Libreville"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Gambia",
         "countryCode": "GM",
-        "timeZone": "Africa/Banjul"
+        "timeZones": [
+            "Africa/Banjul"
+        ],
+        "offsets": [
+            "UTC"
+        ]
     },
     {
         "countryName": "Georgia",
         "countryCode": "GE",
-        "timeZone": "Asia/Tbilisi"
+        "timeZones": [
+            "Asia/Tbilisi"
+        ],
+        "offsets": [
+            "UTC +04:00"
+        ]
     },
     {
         "countryName": "Germany",
         "countryCode": "DE",
-        "timeZone": "multi"
+        "timeZones": [
+            "Europe/Berlin"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Gibraltar",
         "countryCode": "GI",
-        "timeZone": "Europe/Gibraltar"
+        "timeZones": [
+            "Europe/Gibraltar"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Greece",
         "countryCode": "GR",
-        "timeZone": "Europe/Athens"
+        "timeZones": [
+            "Europe/Athens"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Greenland",
         "countryCode": "GL",
-        "timeZone": "multi"
+        "timeZones": [
+            "America/Thule",
+            "America/Nuuk",
+            "America/Danmarkshavn"
+        ],
+        "offsets": [
+            "UTC -03:00",
+            "UTC -01:00",
+            "UTC"
+        ]
     },
     {
         "countryName": "Grenada",
         "countryCode": "GD",
-        "timeZone": "America/Grenada"
+        "timeZones": [
+            "America/Grenada"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Guatemala",
         "countryCode": "GT",
-        "timeZone": "America/Guatemala"
+        "timeZones": [
+            "America/Guatemala"
+        ],
+        "offsets": [
+            "UTC -06:00"
+        ]
     },
     {
         "countryName": "Guernsey",
         "countryCode": "GG",
-        "timeZone": "Europe/Guernsey"
+        "timeZones": [
+            "Europe/Guernsey"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Guyana",
         "countryCode": "GY",
-        "timeZone": "America/Guyana"
+        "timeZones": [
+            "America/Guyana"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Haiti",
         "countryCode": "HT",
-        "timeZone": "America/Port-au-Prince"
+        "timeZones": [
+            "America/Port-au-Prince"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Vatican City",
         "countryCode": "VA",
-        "timeZone": "Europe/Vatican"
+        "timeZones": [
+            "Europe/Vatican"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Honduras",
         "countryCode": "HN",
-        "timeZone": "America/Tegucigalpa"
+        "timeZones": [
+            "America/Tegucigalpa"
+        ],
+        "offsets": [
+            "UTC -06:00"
+        ]
     },
     {
         "countryName": "Hong Kong",
         "countryCode": "HK",
-        "timeZone": "Asia/Hong_Kong"
+        "timeZones": [
+            "Asia/Hong_Kong"
+        ],
+        "offsets": [
+            "UTC +08:00"
+        ]
     },
     {
         "countryName": "Hungary",
         "countryCode": "HU",
-        "timeZone": "Europe/Budapest"
+        "timeZones": [
+            "Europe/Budapest"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Iceland",
         "countryCode": "IS",
-        "timeZone": "Atlantic/Reykjavik"
+        "timeZones": [
+            "Atlantic/Reykjavik"
+        ],
+        "offsets": [
+            "UTC"
+        ]
     },
     {
         "countryName": "Indonesia",
         "countryCode": "ID",
-        "timeZone": "multi"
+        "timeZones": [
+            "Asia/Jakarta",
+            "Asia/Makassar",
+            "Asia/Jayapura"
+        ],
+        "offsets": [
+            "UTC +07:00",
+            "UTC +08:00",
+            "UTC +09:00"
+        ]
     },
     {
         "countryName": "Ireland",
         "countryCode": "IE",
-        "timeZone": "Europe/Dublin"
+        "timeZones": [
+            "Europe/Dublin"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Isle of Man",
         "countryCode": "IM",
-        "timeZone": "Europe/Isle_of_Man"
+        "timeZones": [
+            "Europe/Isle_of_Man"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Italy",
         "countryCode": "IT",
-        "timeZone": "Europe/Rome"
+        "timeZones": [
+            "Europe/Rome"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Jamaica",
         "countryCode": "JM",
-        "timeZone": "America/Jamaica"
+        "timeZones": [
+            "America/Jamaica"
+        ],
+        "offsets": [
+            "UTC -05:00"
+        ]
     },
     {
         "countryName": "Japan",
         "countryCode": "JP",
-        "timeZone": "Asia/Tokyo"
+        "timeZones": [
+            "Asia/Tokyo"
+        ],
+        "offsets": [
+            "UTC +09:00"
+        ]
     },
     {
         "countryName": "Jersey",
         "countryCode": "JE",
-        "timeZone": "Europe/Jersey"
+        "timeZones": [
+            "Europe/Jersey"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Kazakhstan",
         "countryCode": "KZ",
-        "timeZone": "multi"
+        "timeZones": [
+            "Asia/Almaty"
+        ],
+        "offsets": [
+            "UTC +05:00"
+        ]
     },
     {
         "countryName": "South Korea",
         "countryCode": "KR",
-        "timeZone": "Asia/Seoul"
+        "timeZones": [
+            "Asia/Seoul"
+        ],
+        "offsets": [
+            "UTC +09:00"
+        ]
     },
     {
         "countryName": "Latvia",
         "countryCode": "LV",
-        "timeZone": "Europe/Riga"
+        "timeZones": [
+            "Europe/Riga"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Lesotho",
         "countryCode": "LS",
-        "timeZone": "Africa/Maseru"
+        "timeZones": [
+            "Africa/Maseru"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Liechtenstein",
         "countryCode": "LI",
-        "timeZone": "Europe/Vaduz"
+        "timeZones": [
+            "Europe/Vaduz"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Lithuania",
         "countryCode": "LT",
-        "timeZone": "Europe/Vilnius"
+        "timeZones": [
+            "Europe/Vilnius"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Luxembourg",
         "countryCode": "LU",
-        "timeZone": "Europe/Luxembourg"
+        "timeZones": [
+            "Europe/Luxembourg"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "North Macedonia",
         "countryCode": "MK",
-        "timeZone": "Europe/Skopje"
+        "timeZones": [
+            "Europe/Skopje"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Madagascar",
         "countryCode": "MG",
-        "timeZone": "Indian/Antananarivo"
+        "timeZones": [
+            "Indian/Antananarivo"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Malta",
         "countryCode": "MT",
-        "timeZone": "Europe/Malta"
+        "timeZones": [
+            "Europe/Malta"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Mexico",
         "countryCode": "MX",
-        "timeZone": "multi"
+        "timeZones": [
+            "America/Tijuana",
+            "America/Mexico_City",
+            "America/Cancun"
+        ],
+        "offsets": [
+            "UTC -07:00",
+            "UTC -06:00",
+            "UTC -05:00"
+        ]
     },
     {
         "countryName": "Moldova",
         "countryCode": "MD",
-        "timeZone": "Europe/Chisinau"
+        "timeZones": [
+            "Europe/Chisinau"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Monaco",
         "countryCode": "MC",
-        "timeZone": "Europe/Monaco"
+        "timeZones": [
+            "Europe/Monaco"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Mongolia",
         "countryCode": "MN",
-        "timeZone": "multi"
+        "timeZones": [
+            "Asia/Hovd",
+            "Asia/Ulaanbaatar"
+        ],
+        "offsets": [
+            "UTC +07:00",
+            "UTC +08:00"
+        ]
     },
     {
         "countryName": "Montenegro",
         "countryCode": "ME",
-        "timeZone": "Europe/Podgorica"
+        "timeZones": [
+            "Europe/Podgorica"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Montserrat",
         "countryCode": "MS",
-        "timeZone": "America/Montserrat"
+        "timeZones": [
+            "America/Montserrat"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Morocco",
         "countryCode": "MA",
-        "timeZone": "multi"
+        "timeZones": [
+            "Africa/Casablanca"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Mozambique",
         "countryCode": "MZ",
-        "timeZone": "Africa/Maputo"
+        "timeZones": [
+            "Africa/Maputo"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Namibia",
         "countryCode": "NA",
-        "timeZone": "Africa/Windhoek"
+        "timeZones": [
+            "Africa/Windhoek"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Netherlands",
         "countryCode": "NL",
-        "timeZone": "Europe/Amsterdam"
+        "timeZones": [
+            "Europe/Amsterdam"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "New Zealand",
         "countryCode": "NZ",
-        "timeZone": "multi"
+        "timeZones": [
+            "Pacific/Auckland",
+            "Pacific/Chatham"
+        ],
+        "offsets": [
+            "UTC +13:00",
+            "UTC +13:45"
+        ]
     },
     {
         "countryName": "Nicaragua",
         "countryCode": "NI",
-        "timeZone": "America/Managua"
+        "timeZones": [
+            "America/Managua"
+        ],
+        "offsets": [
+            "UTC -06:00"
+        ]
     },
     {
         "countryName": "Niger",
         "countryCode": "NE",
-        "timeZone": "Africa/Niamey"
+        "timeZones": [
+            "Africa/Niamey"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Nigeria",
         "countryCode": "NG",
-        "timeZone": "Africa/Lagos"
+        "timeZones": [
+            "Africa/Lagos"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Norway",
         "countryCode": "NO",
-        "timeZone": "Europe/Oslo"
+        "timeZones": [
+            "Europe/Oslo"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Panama",
         "countryCode": "PA",
-        "timeZone": "America/Panama"
+        "timeZones": [
+            "America/Panama"
+        ],
+        "offsets": [
+            "UTC -05:00"
+        ]
     },
     {
         "countryName": "Papua New Guinea",
         "countryCode": "PG",
-        "timeZone": "multi"
+        "timeZones": [
+            "Pacific/Port_Moresby",
+            "Pacific/Bougainville"
+        ],
+        "offsets": [
+            "UTC +10:00",
+            "UTC +11:00"
+        ]
     },
     {
         "countryName": "Paraguay",
         "countryCode": "PY",
-        "timeZone": "America/Asuncion"
+        "timeZones": [
+            "America/Asuncion"
+        ],
+        "offsets": [
+            "UTC -03:00"
+        ]
     },
     {
         "countryName": "Peru",
         "countryCode": "PE",
-        "timeZone": "America/Lima"
+        "timeZones": [
+            "America/Lima"
+        ],
+        "offsets": [
+            "UTC -05:00"
+        ]
     },
     {
         "countryName": "Poland",
         "countryCode": "PL",
-        "timeZone": "Europe/Warsaw"
+        "timeZones": [
+            "Europe/Warsaw"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Portugal",
         "countryCode": "PT",
-        "timeZone": "multi"
+        "timeZones": [
+            "Atlantic/Azores",
+            "Europe/Lisbon"
+        ],
+        "offsets": [
+            "UTC",
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Puerto Rico",
         "countryCode": "PR",
-        "timeZone": "America/Puerto_Rico"
+        "timeZones": [
+            "America/Puerto_Rico"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Romania",
         "countryCode": "RO",
-        "timeZone": "Europe/Bucharest"
+        "timeZones": [
+            "Europe/Bucharest"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Russia",
         "countryCode": "RU",
-        "timeZone": "multi"
+        "timeZones": [
+            "Asia/Kamchatka",
+            "Europe/Moscow",
+            "Europe/Samara",
+            "Asia/Yekaterinburg",
+            "Asia/Omsk",
+            "Asia/Krasnoyarsk",
+            "Asia/Novosibirsk",
+            "Asia/Irkutsk",
+            "Asia/Chita",
+            "Asia/Vladivostok",
+            "Asia/Magadan",
+            "Asia/Anadyr"
+        ],
+        "offsets": [
+            "UTC +02:00",
+            "UTC +03:00",
+            "UTC +04:00",
+            "UTC +05:00",
+            "UTC +06:00",
+            "UTC +07:00",
+            "UTC +08:00",
+            "UTC +09:00",
+            "UTC +10:00",
+            "UTC +11:00",
+            "UTC +12:00"
+        ]
     },
     {
         "countryName": "San Marino",
         "countryCode": "SM",
-        "timeZone": "Europe/San_Marino"
+        "timeZones": [
+            "Europe/San_Marino"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Serbia",
         "countryCode": "RS",
-        "timeZone": "Europe/Belgrade"
+        "timeZones": [
+            "Europe/Belgrade"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Singapore",
         "countryCode": "SG",
-        "timeZone": "Asia/Singapore"
+        "timeZones": [
+            "Asia/Singapore"
+        ],
+        "offsets": [
+            "UTC +08:00"
+        ]
     },
     {
         "countryName": "Slovakia",
         "countryCode": "SK",
-        "timeZone": "Europe/Bratislava"
+        "timeZones": [
+            "Europe/Bratislava"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Slovenia",
         "countryCode": "SI",
-        "timeZone": "Europe/Ljubljana"
+        "timeZones": [
+            "Europe/Ljubljana"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "South Africa",
         "countryCode": "ZA",
-        "timeZone": "Africa/Johannesburg"
+        "timeZones": [
+            "Africa/Johannesburg"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Spain",
         "countryCode": "ES",
-        "timeZone": "multi"
+        "timeZones": [
+            "Atlantic/Canary",
+            "Europe/Madrid"
+        ],
+        "offsets": [
+            "UTC +01:00",
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Suriname",
         "countryCode": "SR",
-        "timeZone": "America/Paramaribo"
+        "timeZones": [
+            "America/Paramaribo"
+        ],
+        "offsets": [
+            "UTC -03:00"
+        ]
     },
     {
         "countryName": "Svalbard and Jan Mayen",
         "countryCode": "SJ",
-        "timeZone": "Arctic/Longyearbyen"
+        "timeZones": [
+            "Arctic/Longyearbyen"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Sweden",
         "countryCode": "SE",
-        "timeZone": "Europe/Stockholm"
+        "timeZones": [
+            "Europe/Stockholm"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Switzerland",
         "countryCode": "CH",
-        "timeZone": "Europe/Zurich"
+        "timeZones": [
+            "Europe/Zurich"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Tunisia",
         "countryCode": "TN",
-        "timeZone": "Africa/Tunis"
+        "timeZones": [
+            "Africa/Tunis"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "Turkey",
         "countryCode": "TR",
-        "timeZone": "Europe/Istanbul"
+        "timeZones": [
+            "Europe/Istanbul"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "Ukraine",
         "countryCode": "UA",
-        "timeZone": "multi"
+        "timeZones": [
+            "Europe/Kyiv"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     },
     {
         "countryName": "United Kingdom",
         "countryCode": "GB",
-        "timeZone": "Europe/London"
+        "timeZones": [
+            "Europe/London"
+        ],
+        "offsets": [
+            "UTC +01:00"
+        ]
     },
     {
         "countryName": "United States",
         "countryCode": "US",
-        "timeZone": "multi"
+        "timeZones": [
+            "Pacific/Honolulu",
+            "America/Adak",
+            "America/Anchorage",
+            "America/Los_Angeles",
+            "America/Phoenix",
+            "America/Denver",
+            "America/Chicago",
+            "America/New_York"
+        ],
+        "offsets": [
+            "UTC -10:00",
+            "UTC -09:00",
+            "UTC -08:00",
+            "UTC -07:00",
+            "UTC -06:00",
+            "UTC -05:00",
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Uruguay",
         "countryCode": "UY",
-        "timeZone": "America/Montevideo"
+        "timeZones": [
+            "America/Montevideo"
+        ],
+        "offsets": [
+            "UTC -03:00"
+        ]
     },
     {
         "countryName": "Venezuela",
         "countryCode": "VE",
-        "timeZone": "America/Caracas"
+        "timeZones": [
+            "America/Caracas"
+        ],
+        "offsets": [
+            "UTC -04:00"
+        ]
     },
     {
         "countryName": "Viet Nam",
         "countryCode": "VN",
-        "timeZone": "Asia/Ho_Chi_Minh"
+        "timeZones": [
+            "Asia/Ho_Chi_Minh"
+        ],
+        "offsets": [
+            "UTC +07:00"
+        ]
     },
     {
         "countryName": "Zimbabwe",
         "countryCode": "ZW",
-        "timeZone": "Africa/Harare"
+        "timeZones": [
+            "Africa/Harare"
+        ],
+        "offsets": [
+            "UTC +02:00"
+        ]
     },
     {
         "countryName": "Åland Islands",
         "countryCode": "AX",
-        "timeZone": "Europe/Mariehamn"
+        "timeZones": [
+            "Europe/Mariehamn"
+        ],
+        "offsets": [
+            "UTC +03:00"
+        ]
     }
 ]

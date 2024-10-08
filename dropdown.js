@@ -1,7 +1,9 @@
-import { startCountdown } from "./script.js";
-
 export class DropdownMenu {
-  constructor(element = null) {
+  constructor(
+    element = null,
+    onSelectFunction = () =>
+      console.log("This dropdown menu has no function on select")
+  ) {
     if (element) {
       this.element = element;
       this.button = element.querySelector(".ddn-btn");
@@ -45,6 +47,7 @@ export class DropdownMenu {
     document.documentElement.addEventListener("click", () => {
       if (!this.menu.classList.contains("hidden")) this.toggle();
     });
+    this.onSelect = onSelectFunction;
   }
 
   toggle() {
@@ -61,11 +64,15 @@ export class DropdownMenu {
     }
   }
 
-  addItem(item = new DropdownItem(null, this)) {
+  addItem(item = new DropdownItem(null, this), selectIfNoneSelected = false) {
     item.dropdownMenu = this;
     this.items.push(item);
     this.menu.append(item.element);
-    if (this.selected === null) this.selectItem(item);
+    if (
+      selectIfNoneSelected &&
+      (this.selected === null || !this.items.includes(this.selected))
+    )
+      this.selectItem(item);
   }
 
   removeItem(itemName) {
@@ -73,6 +80,7 @@ export class DropdownMenu {
     if (item === null) return;
     item.element.remove();
     this.items.splice(this.items.indexOf(item), 1);
+    if (this.selected === item) this.selected = null;
   }
 
   selectItem(item) {
@@ -82,15 +90,20 @@ export class DropdownMenu {
       this.selected = item;
       item.element.classList.add("selected");
       this.button.querySelector(".ddn-selected").innerText = this.selected.name;
-      localStorage.setItem("selectedCountry", this.selected.name);
-      startCountdown();
+      this.onSelect();
     } else {
       this.selected = item;
       item.element.classList.add("selected");
       this.button.querySelector(".ddn-selected").innerText = this.selected.name;
-      localStorage.setItem("selectedCountry", this.selected.name);
-      startCountdown();
+      this.onSelect();
     }
+  }
+
+  clear() {
+    this.items.forEach((item) => {
+      item.element.remove();
+    });
+    this.items = [];
   }
 }
 

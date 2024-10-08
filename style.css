@@ -33,6 +33,7 @@
 .ddn {
   position: relative;
   font-size: 18px;
+  width: 270px;
 }
 .ddn-btn {
   position: absolute;
@@ -40,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 280px;
+  width: inherit;
   height: 50px;
   padding: 0.6em;
   font: inherit;
@@ -67,9 +68,9 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  width: 280px;
   background-color: var(--bg-second);
   border-radius: 8px;
+  width: inherit;
   max-height: 400px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -85,6 +86,17 @@
 }
 .ddn-item.selected {
   background-color: var(--selected-color);
+}
+.country-ddn {
+  z-index: 1;
+  width: 270px;
+  font-size: 18px;
+}
+.time-zone-ddn {
+  z-index: 0;
+  top: 80px;
+  width: 270px;
+  font-size: 14px;
 }
 
 .countdown,
