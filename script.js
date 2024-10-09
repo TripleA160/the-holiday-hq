@@ -1,5 +1,6 @@
 /*
 => fix the bug that prevents loading saved timezone
+=> add islamic holidays
 */
 
 import {
