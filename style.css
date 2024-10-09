@@ -4,6 +4,10 @@
   --bg-third: #e2e2e2;
   --bg-fourth: #dddddd;
   --selected-color: #cdcdcd;
+  --transition-pos: transform 0.2s ease;
+  --transition-scale: transform 0.2s ease;
+  --transition-border-color: border-color 0.2s linear;
+  --transition-bg-color: background-color 0.4s cubic-bezier(0.1, 0.1, 0.2, 1);
 }
 * {
   box-sizing: border-box;
@@ -80,6 +84,7 @@
   display: flex;
   padding: 0.6em;
   user-select: none;
+  transition: var(--transition-bg-color);
 }
 .ddn-item:hover {
   background-color: var(--bg-third);
@@ -87,6 +92,12 @@
 .ddn-item.selected {
   background-color: var(--selected-color);
 }
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
 .country-ddn {
   z-index: 1;
   width: 270px;
@@ -110,7 +121,7 @@
   align-items: center;
 }
 .countdown-label {
-  margin-top: 40px;
+  margin: 45px 0;
   font-size: 72px;
 }
 .digit {
@@ -127,6 +138,37 @@
 }
 .countdown-label,
 .digit:nth-child(1) {
-  color: rgb(15, 178, 159);
+  color: #0fb29f;
   font-weight: bold;
+}
+
+.holidays-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-self: center;
+  width: 800px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  user-select: none;
+}
+.holidays-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  padding: 10px;
+  width: 200px;
+  height: 80px;
+  background-color: #bbddff;
+  border: 4px solid #b1d1f1;
+  border-radius: 20px;
+  transform-origin: top;
+  transition: var(--transition-scale), var(--transition-border-color);
+}
+.holidays-item:hover {
+  transform: scale(1.06);
+  border-color: #a1c1e1;
 }

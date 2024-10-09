@@ -1,19 +1,28 @@
 /*
-=> Add css transitions
-=> Add a list of all hollidays
+=> fix the bug that prevents loading saved timezone
 */
 
-import { DropdownMenu, DropdownItem } from "./dropdown.js";
+import {
+  DropdownMenu,
+  DropdownItem,
+  HolidayList,
+  HolidayItem,
+} from "./module.js";
 
 const header = document.querySelector("#header");
+const options = document.querySelector("#options");
 const content = document.querySelector("#content");
 const countryDdn = new DropdownMenu(
-  content.querySelector("#country-ddn"),
+  options.querySelector("#country-ddn"),
   handleCountrySelection
 );
 const timeZoneDdn = new DropdownMenu(
-  content.querySelector("#time-zone-ddn"),
+  options.querySelector("#time-zone-ddn"),
   handleTimeZoneSelection
+);
+const holidayList = new HolidayList(
+  content.querySelector(".holidays-list"),
+  handleUpcomingHoliday
 );
 const countdown = content.querySelector(".countdown");
 const cDays = countdown.querySelector(".digit-days");
@@ -76,6 +85,7 @@ async function fetchHolidays(year, lastYear = 2040) {
           break;
         }
       }
+      await updateHolidayList();
       if (upcomingHoliday) {
         let date = upcomingHoliday.date.split("-");
         upcomingHolidayName = upcomingHoliday.localName;
@@ -83,6 +93,9 @@ async function fetchHolidays(year, lastYear = 2040) {
           Date.UTC(date[0], date[1] - 1, date[2], 0, 0, 0) - offset;
         cName.innerHTML = upcomingHolidayName;
         cDate.innerHTML = `(${upcomingHoliday.date.replaceAll("-", "/")})`;
+        holidayList.items.forEach((item) => {
+          if (item.name === upcomingHolidayName) holidayList.setUpcoming(item);
+        });
         console.log(holidays);
       } else yearNum++;
     }
@@ -180,6 +193,13 @@ async function updateTimeZoneDropdown() {
   firstUpdate = false;
 }
 
+async function updateHolidayList() {
+  holidayList.clear();
+  holidays.forEach((holiday) => {
+    holidayList.addItem(new HolidayItem(null, null, holiday.localName));
+  });
+}
+
 function updateCounter() {
   let timeDiff = upcomingHolidayTime - currTime;
 
@@ -244,5 +264,7 @@ async function handleTimeZoneSelection() {
 
   await startCountdown();
 }
+
+async function handleUpcomingHoliday() {}
 
 fetchCountries();

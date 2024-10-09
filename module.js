@@ -9,6 +9,9 @@ export class DropdownMenu {
       this.button = element.querySelector(".ddn-btn");
       this.menu = element.querySelector(".ddn-menu");
       this.items = [];
+      Array.from(element.children).forEach((child) => {
+        this.items.push(new DropdownItem(null, this, child.innerText));
+      });
       this.menu.querySelectorAll(".ddn-item").forEach((e) => {
         this.items.push(new DropdownItem(e, this));
       });
@@ -16,7 +19,7 @@ export class DropdownMenu {
     } else {
       this.element = document.createElement("div");
       this.element.className = "ddn";
-      this.element.innerText = itemText;
+      this.element.innerText = "New Dropdown Menu";
       this.button = document.createElement("button");
       this.button.className = "ddn-btn";
       this.button.innerHTML = `
@@ -75,8 +78,8 @@ export class DropdownMenu {
       this.selectItem(item);
   }
 
-  removeItem(itemName) {
-    let item = this.items.find((i) => i.name === itemName);
+  removeItem(name) {
+    let item = this.items.find((i) => i.name === name);
     if (item === null) return;
     item.element.remove();
     this.items.splice(this.items.indexOf(item), 1);
@@ -100,9 +103,7 @@ export class DropdownMenu {
   }
 
   clear() {
-    this.items.forEach((item) => {
-      item.element.remove();
-    });
+    this.menu.innerHTML = "";
     this.items = [];
   }
 }
@@ -139,4 +140,91 @@ export class DropdownItem {
 
   select = () =>
     this.dropdownMenu ? this.dropdownMenu.selectItem(this) : null;
+}
+
+export class HolidayList {
+  constructor(
+    element = null,
+    onSetUpcomingFunction = () =>
+      console.log("This holiday list has no function on setting upcoming")
+  ) {
+    if (element) {
+      this.element = element;
+      this.items = [];
+      Array.from(element.children).forEach((child) => {
+        this.items.push(new HolidayItem(null, this, child.innerText));
+      });
+      this.upcoming = null;
+    } else {
+      this.element = document.createElement("div");
+      this.element.className = "holidays-list";
+      this.items = [];
+      this.upcoming = null;
+    }
+    this.onSetUpcoming = onSetUpcomingFunction;
+  }
+
+  addItem(item = new HolidayItem(null, this)) {
+    item.holidayList = this;
+    this.items.push(item);
+    this.element.append(item.element);
+  }
+
+  removeItem(name) {
+    let item = this.items.find((i) => i.name === name);
+    if (item === null) return;
+    item.element.remove();
+    this.items.splice(this.items.indexOf(item), 1);
+    if (this.selected === item) this.selected = null;
+  }
+
+  setUpcoming(item) {
+    if (this.upcoming) {
+      if (this.upcoming === item) return;
+      this.upcoming.element.classList.remove("upcoming");
+      this.upcoming = item;
+      item.element.classList.add("upcoming");
+      this.onSetUpcoming();
+    } else {
+      this.upcoming = item;
+      item.element.classList.add("upcoming");
+      this.onSetUpcoming();
+    }
+  }
+
+  clear() {
+    this.element.innerHTML = "";
+    this.items = [];
+  }
+}
+
+export class HolidayItem {
+  constructor(element = null, holidayList = null, name = null) {
+    if (element) {
+      this.element = element;
+      this.name = element.innerText;
+      this.holidayList = holidayList
+        ? holidayList
+        : new HolidayList(element.parentElement);
+    } else {
+      this.element = document.createElement("div");
+      this.element.className = "holidays-item";
+      if (name) {
+        this.name = name;
+        this.element.innerText = name;
+      } else {
+        this.name = "New Item";
+        this.element.innerText = "New Item";
+      }
+      this.holidayList = holidayList ? holidayList : null;
+    }
+  }
+
+  add = () => (this.holidayList ? this.holidayList.addItem(this) : null);
+
+  remove = () =>
+    this.holidayList ? this.holidayList.removeItem(this.name) : null;
+
+  setUpcoming = () =>
+    this.holidayList ? this.holidayList.setUpcoming(this) : null;
 }
