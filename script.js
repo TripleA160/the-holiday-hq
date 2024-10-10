@@ -80,6 +80,8 @@ async function fetchHolidays(year, lastYear = 2040) {
         `https://date.nager.at/api/v3/PublicHolidays/${yearNum}/${countryCode}`
       );
       holidays = await response.json();
+      await fetchExtraHolidays(yearNum);
+      holidays.sort((a, b) => new Date(a.date) - new Date(b.date));
       for (let i = 0; i < holidays.length; i++) {
         if (new Date(holidays[i].date).getTime() > currTime) {
           upcomingHoliday = holidays[i];
@@ -100,8 +102,21 @@ async function fetchHolidays(year, lastYear = 2040) {
         console.log(holidays);
       } else yearNum++;
     }
+    console.log(holidays);
   } catch (error) {
     console.error("Error fetching holidays data from API", error);
+  }
+}
+
+async function fetchExtraHolidays(year) {
+  try {
+    let response = await fetch("./extra-holidays.json");
+    let extraHolidays = await response.json();
+    extraHolidays[year].forEach((h) => {
+      if (h.countries.includes(countryDdn.selected.name)) holidays.push(h);
+    });
+  } catch (error) {
+    console.error("Error fetching extra holidays", error);
   }
 }
 
