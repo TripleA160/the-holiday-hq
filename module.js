@@ -199,22 +199,37 @@ export class HolidayList {
 }
 
 export class HolidayItem {
-  constructor(element = null, holidayList = null, name = null) {
+  constructor(element = null, holidayList = null, name = null, date = null) {
     if (element) {
       this.element = element;
-      this.name = element.innerText;
+      this.nameElement = element.querySelector(".holidays-item-name");
+      this.dateElement = element.querySelector(".holidays-item-date");
+      this.name = this.nameElement.innerText;
+      this.date = this.dateElement.innerText;
       this.holidayList = holidayList
         ? holidayList
         : new HolidayList(element.parentElement);
     } else {
       this.element = document.createElement("div");
       this.element.className = "holidays-item";
+      this.nameElement = document.createElement("div");
+      this.nameElement.className = "holidays-item-name";
+      this.dateElement = document.createElement("div");
+      this.dateElement.className = "holidays-item-date";
+      this.element.append(this.nameElement, this.dateElement);
       if (name) {
         this.name = name;
-        this.element.innerText = name;
+        this.nameElement.innerText = this.name;
       } else {
         this.name = "New Item";
-        this.element.innerText = "New Item";
+        this.nameElement.innerText = this.name;
+      }
+      if (date) {
+        this.date = date;
+        this.dateElement.innerText = this.date;
+      } else {
+        this.date = null;
+        this.dateElement.innerText = " ";
       }
       this.holidayList = holidayList ? holidayList : null;
     }

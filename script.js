@@ -1,6 +1,5 @@
 /*
-=> fix the bug that prevents loading saved timezone
-=> add islamic holidays
+=> add national extra holidays for other countries
 */
 
 import {
@@ -21,6 +20,8 @@ const timeZoneDdn = new DropdownMenu(
   options.querySelector("#time-zone-ddn"),
   handleTimeZoneSelection
 );
+const languageBtn = options.querySelector(".language-switch-btn");
+const languageLabel = options.querySelector(".language-switch-label");
 const holidayList = new HolidayList(
   content.querySelector(".holidays-list"),
   handleUpcomingHoliday
@@ -32,6 +33,8 @@ const cMinutes = countdown.querySelector(".digit-minutes");
 const cSeconds = countdown.querySelector(".digit-seconds");
 const cName = countdown.querySelector(".countdown-name");
 const cDate = countdown.querySelector(".countdown-date");
+
+let isLocal = localStorage.getItem("isLocal");
 
 let countries = [];
 let countriesFetched = false;
@@ -49,6 +52,8 @@ let offset = 0;
 
 let updateInterval = null;
 let fetchInterval = null;
+
+console.log(new Date().toUTCString());
 
 async function fetchCountries() {
   if (countriesFetched) return;
@@ -91,19 +96,18 @@ async function fetchHolidays(year, lastYear = 2040) {
       await updateHolidayList();
       if (upcomingHoliday) {
         let date = upcomingHoliday.date.split("-");
-        upcomingHolidayName = upcomingHoliday.localName;
+        upcomingHolidayName =
+          isLocal === "true" ? upcomingHoliday.localName : upcomingHoliday.name;
         upcomingHolidayTime =
           Date.UTC(date[0], date[1] - 1, date[2], 0, 0, 0) - offset;
         cName.innerHTML = upcomingHolidayName;
         cDate.innerHTML = `(${upcomingHoliday.date.replaceAll("-", "/")})`;
-        holidayList.items.forEach((item) => {
-          if (item.name === upcomingHolidayName) holidayList.setUpcoming(item);
-        });
         console.log(holidays);
       } else yearNum++;
     }
     console.log(holidays);
   } catch (error) {
+    holidays = [];
     console.error("Error fetching holidays data from API", error);
   }
 }
@@ -121,12 +125,17 @@ async function fetchExtraHolidays(year) {
 }
 
 async function fetchTime() {
+  let timeZoneSplit = timeZone.split("/");
+  let apiTimeZone = timeZoneSplit[0];
+  for (let i = 1; i < timeZoneSplit.length; i++) {
+    apiTimeZone += `%2F${timeZoneSplit[i]}`;
+  }
   try {
     let response = await fetch(
-      `https://worldtimeapi.org/api/timezone/${timeZone}`
+      `https://timeapi.io/api/time/current/zone?timeZone=${apiTimeZone}`
     );
     let time = await response.json();
-    currDate = new Date(time.utc_datetime);
+    currDate = new Date(time.dateTime);
     currTime = currDate.getTime();
   } catch (error) {
     console.error("Error fetching time from API", error);
@@ -202,9 +211,9 @@ async function updateTimeZoneDropdown() {
 
     if (firstUpdate && storedTimeZone && timeZoneName === storedTimeZone)
       timeZoneDdn.selectItem(timeZoneItem);
+    else if (i === timeZones.length - 1)
+      timeZoneDdn.selectItem(timeZoneDdn.items[0]);
   }
-
-  if (!timeZoneDdn.selected) timeZoneDdn.selectItem(timeZoneDdn.items[0]);
 
   firstUpdate = false;
 }
@@ -212,7 +221,15 @@ async function updateTimeZoneDropdown() {
 async function updateHolidayList() {
   holidayList.clear();
   holidays.forEach((holiday) => {
-    holidayList.addItem(new HolidayItem(null, null, holiday.localName));
+    let hName = isLocal === "true" ? holiday.localName : holiday.name;
+    let hItem = new HolidayItem(
+      null,
+      null,
+      hName,
+      holiday.date.replaceAll("-", "/")
+    );
+    holidayList.addItem(hItem);
+    if (upcomingHoliday && upcomingHolidayName === hName) hItem.setUpcoming();
   });
 }
 
@@ -259,6 +276,7 @@ async function startCountdown() {
   await fetchTime();
   await fetchHolidays(currDate.getFullYear());
   await clearIntervals();
+  checkLanguage();
   updateCounter();
   updateInterval = setInterval(updateCounter, 1000);
   fetchInterval = setInterval(fetchTime, 600000);
@@ -270,7 +288,6 @@ async function handleCountrySelection() {
     : localStorage.setItem("selectedCountry", "None");
 
   await updateTimeZoneDropdown();
-  timeZoneDdn.selectItem(timeZoneDdn.items[0]);
   await startCountdown();
 }
 async function handleTimeZoneSelection() {
@@ -282,5 +299,59 @@ async function handleTimeZoneSelection() {
 }
 
 async function handleUpcomingHoliday() {}
+
+function checkLanguage() {
+  if (isLocal === "false") {
+    upcomingHolidayName = upcomingHoliday.name;
+    languageLabel.querySelector(".language-switch-label-short").innerText =
+      "En";
+    languageLabel.querySelector(".language-switch-label-full").innerText =
+      "English Names";
+    languageBtn.setAttribute("title", "Switch to Local Names");
+  } else if (isLocal === "true") {
+    upcomingHolidayName = upcomingHoliday.localName;
+    languageLabel.querySelector(".language-switch-label-short").innerText =
+      "Loc";
+    languageLabel.querySelector(".language-switch-label-full").innerText =
+      "Local Names";
+    languageBtn.setAttribute("title", "Switch to English Names");
+  } else {
+    localStorage.setItem("isLocal", "true");
+    upcomingHolidayName = upcomingHoliday.localName;
+    languageLabel.querySelector(".language-switch-label-short").innerText =
+      "Loc";
+    languageLabel.querySelector(".language-switch-label-full").innerText =
+      "Local Names";
+    languageBtn.setAttribute("title", "Switch to English Names");
+  }
+  cName.innerHTML = upcomingHolidayName;
+  updateHolidayList();
+}
+function switchLanguage() {
+  isLocal = localStorage.getItem("isLocal");
+  if (isLocal === "true") {
+    localStorage.setItem("isLocal", "false");
+    isLocal = "false";
+    upcomingHolidayName = upcomingHoliday.name;
+    languageLabel.querySelector(".language-switch-label-short").innerText =
+      "En";
+    languageLabel.querySelector(".language-switch-label-full").innerText =
+      "English Names";
+    languageBtn.setAttribute("title", "Switch to Local Names");
+  } else {
+    localStorage.setItem("isLocal", "true");
+    isLocal = "true";
+    upcomingHolidayName = upcomingHoliday.localName;
+    languageLabel.querySelector(".language-switch-label-short").innerText =
+      "Loc";
+    languageLabel.querySelector(".language-switch-label-full").innerText =
+      "Local Names";
+    languageBtn.setAttribute("title", "Switch to English Names");
+  }
+  cName.innerHTML = upcomingHolidayName;
+  updateHolidayList();
+}
+
+languageBtn.addEventListener("click", switchLanguage);
 
 fetchCountries();
