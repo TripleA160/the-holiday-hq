@@ -1,5 +1,8 @@
 /*
+=> check if the first letter in local is rtl or ltr and change the direction to match it
+=> fix the bug preventing the timezone from applying in some countries including Chile and Ecuador
 => add national extra holidays for other countries
+=> add more years for extra holidays
 */
 
 import {
@@ -210,7 +213,7 @@ async function updateTimeZoneDropdown() {
     timeZoneDdn.addItem(timeZoneItem);
 
     if (firstUpdate && storedTimeZone && timeZoneName === storedTimeZone)
-      timeZoneDdn.selectItem(timeZoneItem);
+      timeZoneDdn.selectItem(timeZoneItem, false);
     else if (i === timeZones.length - 1)
       timeZoneDdn.selectItem(timeZoneDdn.items[0]);
   }
@@ -220,17 +223,19 @@ async function updateTimeZoneDropdown() {
 
 async function updateHolidayList() {
   holidayList.clear();
-  holidays.forEach((holiday) => {
-    let hName = isLocal === "true" ? holiday.localName : holiday.name;
+  for (let i = 0; i < holidays.length; i++) {
+    if (i > 0 && holidays[i].name === holidays[i - 1].name) continue;
+
+    let hName = isLocal === "true" ? holidays[i].localName : holidays[i].name;
     let hItem = new HolidayItem(
       null,
       null,
       hName,
-      holiday.date.replaceAll("-", "/")
+      holidays[i].date.replaceAll("-", "/")
     );
     holidayList.addItem(hItem);
     if (upcomingHoliday && upcomingHolidayName === hName) hItem.setUpcoming();
-  });
+  }
 }
 
 function updateCounter() {

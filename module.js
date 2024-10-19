@@ -86,19 +86,21 @@ export class DropdownMenu {
     if (this.selected === item) this.selected = null;
   }
 
-  selectItem(item) {
+  selectItem(item, OnSelectFunctionEnabled = true) {
     if (this.selected) {
       if (this.selected === item) return;
       this.selected.element.classList.remove("selected");
       this.selected = item;
+      console.log(`Previous: ${this.selected.name}, New: ${item.name}`);
       item.element.classList.add("selected");
       this.button.querySelector(".ddn-selected").innerText = this.selected.name;
-      this.onSelect();
+      if (OnSelectFunctionEnabled) this.onSelect();
     } else {
       this.selected = item;
+      console.log(`Selected first time: ${item.name}`);
       item.element.classList.add("selected");
       this.button.querySelector(".ddn-selected").innerText = this.selected.name;
-      this.onSelect();
+      if (OnSelectFunctionEnabled) this.onSelect();
     }
   }
 
