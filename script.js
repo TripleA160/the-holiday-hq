@@ -1,6 +1,5 @@
 /*
-=> check if the first letter in local is rtl or ltr and change the direction to match it
-=> fix the bug preventing the timezone from applying in some countries including Chile and Ecuador
+=> add other countries to countries.json
 => add national extra holidays for other countries
 => add more years for extra holidays
 */
@@ -56,8 +55,6 @@ let offset = 0;
 let updateInterval = null;
 let fetchInterval = null;
 
-console.log(new Date().toUTCString());
-
 async function fetchCountries() {
   if (countriesFetched) return;
   try {
@@ -74,6 +71,7 @@ async function fetchCountries() {
 
     await updateCountryDropdown();
 
+    console.log(`\nFetched Countries`);
     console.log(countries);
   } catch (error) {
     console.error("Error fetching time zones data from API", error);
@@ -101,14 +99,13 @@ async function fetchHolidays(year, lastYear = 2040) {
         let date = upcomingHoliday.date.split("-");
         upcomingHolidayName =
           isLocal === "true" ? upcomingHoliday.localName : upcomingHoliday.name;
-        upcomingHolidayTime =
-          Date.UTC(date[0], date[1] - 1, date[2], 0, 0, 0) - offset;
+        upcomingHolidayTime = Date.UTC(date[0], date[1] - 1, date[2], 0, 0, 0);
         cName.innerHTML = upcomingHolidayName;
         cDate.innerHTML = `(${upcomingHoliday.date.replaceAll("-", "/")})`;
+        console.log(`\nFetched Holidays`);
         console.log(holidays);
       } else yearNum++;
     }
-    console.log(holidays);
   } catch (error) {
     holidays = [];
     console.error("Error fetching holidays data from API", error);
@@ -128,18 +125,15 @@ async function fetchExtraHolidays(year) {
 }
 
 async function fetchTime() {
-  let timeZoneSplit = timeZone.split("/");
-  let apiTimeZone = timeZoneSplit[0];
-  for (let i = 1; i < timeZoneSplit.length; i++) {
-    apiTimeZone += `%2F${timeZoneSplit[i]}`;
-  }
   try {
     let response = await fetch(
-      `https://timeapi.io/api/time/current/zone?timeZone=${apiTimeZone}`
+      `https://timeapi.io/api/time/current/zone?timeZone=UTC`
     );
     let time = await response.json();
-    currDate = new Date(time.dateTime);
-    currTime = currDate.getTime();
+    currDate = new Date(time.dateTime + "Z");
+    currTime = currDate.getTime() + offset;
+    console.log(`\nFetched Time`);
+    console.log(currDate.toISOString());
   } catch (error) {
     console.error("Error fetching time from API", error);
   }
@@ -168,11 +162,9 @@ async function updateCountry() {
 
   timeZone = selectedTimeZone.split(" ")[0];
 
-  let offsetSign = selectedTimeZone.split("UTC")[1][1];
   let offsetHours = parseInt(selectedTimeZone.split("UTC")[1].split(":")[0]);
   let offsetMinutes = parseInt(selectedTimeZone.split("UTC")[1].split(":")[1]);
   offset = (offsetHours * 60 + offsetMinutes) * 60 * 1000;
-  if (offsetSign === "-") offset = -offset;
 }
 
 async function updateCountryDropdown() {
@@ -236,6 +228,9 @@ async function updateHolidayList() {
     holidayList.addItem(hItem);
     if (upcomingHoliday && upcomingHolidayName === hName) hItem.setUpcoming();
   }
+  if (isLocal === "true" && isRTL(holidays[0].localName))
+    holidayList.element.style.flexDirection = "row-reverse";
+  else holidayList.element.style.flexDirection = "row";
 }
 
 function updateCounter() {
@@ -261,11 +256,6 @@ function updateCounter() {
     cSeconds.innerHTML = "00";
     alert("It's holiday time!");
   }
-  console.log("Current Time (currTime): ", new Date(currTime).toISOString());
-  console.log(
-    "Holiday Time (upcomingHolidayTime): ",
-    new Date(upcomingHolidayTime).toISOString()
-  );
 }
 
 async function clearIntervals() {
@@ -355,6 +345,11 @@ function switchLanguage() {
   }
   cName.innerHTML = upcomingHolidayName;
   updateHolidayList();
+}
+function isRTL(text) {
+  const rtlPattern =
+    /[\u0590-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB1D-\uFDFD\uFE70-\uFEFF]/;
+  return rtlPattern.test(text);
 }
 
 languageBtn.addEventListener("click", switchLanguage);
