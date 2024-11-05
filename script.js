@@ -1,4 +1,5 @@
 /*
+=> add a settings menu for countries and timezones with toggle button with country flag as the menu icon
 => add other countries to countries.json
 => add national extra holidays for other countries
 => add more years for extra holidays
@@ -74,7 +75,7 @@ async function fetchCountries() {
     console.log(`\nFetched Countries`);
     console.log(countries);
   } catch (error) {
-    console.error("Error fetching time zones data from API", error);
+    console.error("Error fetching time zones data", error);
   }
 }
 
@@ -108,7 +109,7 @@ async function fetchHolidays(year, lastYear = 2040) {
     }
   } catch (error) {
     holidays = [];
-    console.error("Error fetching holidays data from API", error);
+    console.error("Error fetching holidays data", error);
   }
 }
 
@@ -126,16 +127,23 @@ async function fetchExtraHolidays(year) {
 
 async function fetchTime() {
   try {
-    let response = await fetch(
-      `https://timeapi.io/api/time/current/zone?timeZone=UTC`
-    );
-    let time = await response.json();
-    currDate = new Date(time.dateTime + "Z");
-    currTime = currDate.getTime() + offset;
-    console.log(`\nFetched Time`);
-    console.log(currDate.toISOString());
+    const response = await fetch("https://api.ipify.org?format=json");
+    const data = await response.json();
+    let ip = data.ip;
+    try {
+      let response = await fetch(
+        `https://timeapi.io/api/time/current/ip?ipAddress=${ip}`
+      );
+      let time = await response.json();
+      currDate = new Date(time.dateTime + "Z");
+      currTime = currDate.getTime();
+      console.log(`\nFetched Time`);
+      console.log(currDate.toISOString());
+    } catch (error) {
+      console.error("Error fetching time", error);
+    }
   } catch (error) {
-    console.error("Error fetching time from API", error);
+    console.error("Error fetching IP address", error);
   }
 }
 
