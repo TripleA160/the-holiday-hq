@@ -15,13 +15,21 @@ import {
 const header = document.querySelector("#header");
 const options = document.querySelector("#options");
 const content = document.querySelector("#content");
+const regionSettingsBtn = options.querySelector(".region-settings-btn");
+const regionSettings = options.querySelector("#region-settings");
 const countryDdn = new DropdownMenu(
-  options.querySelector("#country-ddn"),
+  regionSettings.querySelector("#country-ddn"),
   handleCountrySelection
 );
 const timeZoneDdn = new DropdownMenu(
-  options.querySelector("#time-zone-ddn"),
+  regionSettings.querySelector("#time-zone-ddn"),
   handleTimeZoneSelection
+);
+const timeZoneToggleCheckbox = regionSettings.querySelector(
+  ".time-zone-toggle-checkbox"
+);
+const timeZoneToggleLabel = regionSettings.querySelector(
+  ".time-zone-toggle-label"
 );
 const languageBtn = options.querySelector(".language-switch-btn");
 const languageLabel = options.querySelector(".language-switch-label");
@@ -170,8 +178,8 @@ async function updateCountry() {
 
   timeZone = selectedTimeZone.split(" ")[0];
 
-  let offsetHours = parseInt(selectedTimeZone.split("UTC")[1].split(":")[0]);
-  let offsetMinutes = parseInt(selectedTimeZone.split("UTC")[1].split(":")[1]);
+  let offsetHours = parseInt(selectedTimeZone.split("GMT")[1].split(":")[0]);
+  let offsetMinutes = parseInt(selectedTimeZone.split("GMT")[1].split(":")[1]);
   offset = (offsetHours * 60 + offsetMinutes) * 60 * 1000;
 }
 
@@ -205,9 +213,8 @@ async function updateTimeZoneDropdown() {
   let offsets = selectedCountry.offsets;
 
   timeZoneDdn.clear();
-
   for (let i = 0; i < timeZones.length; i++) {
-    let timeZoneName = `${timeZones[i]} ${offsets[i]}`;
+    let timeZoneName = `${timeZones[i]}\n${offsets[i]}`;
     let timeZoneItem = new DropdownItem(null, null, timeZoneName);
 
     timeZoneDdn.addItem(timeZoneItem);
@@ -360,6 +367,36 @@ function isRTL(text) {
   return rtlPattern.test(text);
 }
 
+function toggleTimeZoneDdn() {
+  let iconUnchecked = timeZoneToggleCheckbox.querySelector(
+    ".checkbox-icon-unchecked"
+  );
+  let iconChecked = timeZoneToggleCheckbox.querySelector(
+    ".checkbox-icon-checked"
+  );
+  iconUnchecked.classList.toggle("hidden");
+  iconChecked.classList.toggle("hidden");
+  timeZoneDdn.element.classList.toggle("hidden");
+}
+
+document.documentElement.addEventListener("click", () => {
+  regionSettings.classList.add("hidden");
+});
+regionSettings.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+regionSettingsBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  regionSettings.classList.toggle("hidden");
+});
+timeZoneToggleCheckbox.addEventListener("click", (e) => {
+  e.stopPropagation();
+  toggleTimeZoneDdn();
+});
+timeZoneToggleLabel.addEventListener("click", (e) => {
+  e.stopPropagation();
+  toggleTimeZoneDdn();
+});
 languageBtn.addEventListener("click", switchLanguage);
 
 fetchCountries();

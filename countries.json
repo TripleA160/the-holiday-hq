@@ -7,7 +7,7 @@
             "Europe/Tirane"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -18,7 +18,7 @@
             "Europe/Andorra"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -29,7 +29,7 @@
             "America/Argentina/Buenos_Aires"
         ],
         "offsets": [
-            "UTC -03:00"
+            "GMT-03:00"
         ]
     },
     {
@@ -40,7 +40,7 @@
             "Asia/Yerevan"
         ],
         "offsets": [
-            "UTC +04:00"
+            "GMT+04:00"
         ]
     },
     {
@@ -56,12 +56,12 @@
             "Australia/Sydney"
         ],
         "offsets": [
-            "UTC +08:00",
-            "UTC +08:45",
-            "UTC +09:30",
-            "UTC +10:00",
-            "UTC +10:30",
-            "UTC +11:00"
+            "GMT+08:00",
+            "GMT+08:45",
+            "GMT+09:30",
+            "GMT+10:00",
+            "GMT+10:30",
+            "GMT+11:00"
         ]
     },
     {
@@ -72,7 +72,7 @@
             "Europe/Vienna"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -83,7 +83,7 @@
             "America/Nassau"
         ],
         "offsets": [
-            "UTC -05:00"
+            "GMT-05:00"
         ]
     },
     {
@@ -94,7 +94,7 @@
             "America/Barbados"
         ],
         "offsets": [
-            "UTC -04:00"
+            "GMT-04:00"
         ]
     },
     {
@@ -105,7 +105,7 @@
             "Europe/Minsk"
         ],
         "offsets": [
-            "UTC +03:00"
+            "GMT+03:00"
         ]
     },
     {
@@ -116,7 +116,7 @@
             "Europe/Brussels"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -127,7 +127,7 @@
             "America/Belize"
         ],
         "offsets": [
-            "UTC -06:00"
+            "GMT-06:00"
         ]
     },
     {
@@ -138,7 +138,7 @@
             "Africa/Porto-Novo"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -149,7 +149,7 @@
             "America/La_Paz"
         ],
         "offsets": [
-            "UTC -04:00"
+            "GMT-04:00"
         ]
     },
     {
@@ -160,7 +160,7 @@
             "Europe/Sarajevo"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -171,7 +171,7 @@
             "Africa/Gaborone"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -185,10 +185,10 @@
             "America/Noronha"
         ],
         "offsets": [
-            "UTC -05:00",
-            "UTC -04:00",
-            "UTC -03:00",
-            "UTC -02:00"
+            "GMT-05:00",
+            "GMT-04:00",
+            "GMT-03:00",
+            "GMT-02:00"
         ]
     },
     {
@@ -199,7 +199,7 @@
             "Europe/Sofia"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -215,12 +215,12 @@
             "America/St_Johns"
         ],
         "offsets": [
-            "UTC -08:00",
-            "UTC -07:00",
-            "UTC -06:00",
-            "UTC -05:00",
-            "UTC -04:00",
-            "UTC -03:30"
+            "GMT-08:00",
+            "GMT-07:00",
+            "GMT-06:00",
+            "GMT-05:00",
+            "GMT-04:00",
+            "GMT-03:30"
         ]
     },
     {
@@ -232,8 +232,8 @@
             "America/Santiago"
         ],
         "offsets": [
-            "UTC -05:00",
-            "UTC -03:00"
+            "GMT-05:00",
+            "GMT-03:00"
         ]
     },
     {
@@ -245,8 +245,8 @@
             "Asia/Shanghai"
         ],
         "offsets": [
-            "UTC +06:00",
-            "UTC +08:00"
+            "GMT+06:00",
+            "GMT+08:00"
         ]
     },
     {
@@ -257,7 +257,7 @@
             "America/Bogota"
         ],
         "offsets": [
-            "UTC -05:00"
+            "GMT-05:00"
         ]
     },
     {
@@ -268,7 +268,7 @@
             "America/Costa_Rica"
         ],
         "offsets": [
-            "UTC -06:00"
+            "GMT-06:00"
         ]
     },
     {
@@ -279,7 +279,7 @@
             "Europe/Zagreb"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -290,7 +290,7 @@
             "America/Havana"
         ],
         "offsets": [
-            "UTC -05:00"
+            "GMT-05:00"
         ]
     },
     {
@@ -301,7 +301,7 @@
             "Asia/Nicosia"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -312,7 +312,7 @@
             "Europe/Prague"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -323,7 +323,7 @@
             "Europe/Copenhagen"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -334,7 +334,7 @@
             "America/Santo_Domingo"
         ],
         "offsets": [
-            "UTC -04:00"
+            "GMT-04:00"
         ]
     },
     {
@@ -346,8 +346,8 @@
             "America/Guayaquil"
         ],
         "offsets": [
-            "UTC -06:00",
-            "UTC -05:00"
+            "GMT-06:00",
+            "GMT-05:00"
         ]
     },
     {
@@ -358,7 +358,7 @@
             "Africa/Cairo"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -369,7 +369,7 @@
             "America/El_Salvador"
         ],
         "offsets": [
-            "UTC -06:00"
+            "GMT-06:00"
         ]
     },
     {
@@ -380,7 +380,7 @@
             "Europe/Tallinn"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -391,7 +391,7 @@
             "Atlantic/Faroe"
         ],
         "offsets": [
-            "UTC"
+            "GMT"
         ]
     },
     {
@@ -402,7 +402,7 @@
             "Europe/Helsinki"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -413,7 +413,7 @@
             "Europe/Paris"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -424,7 +424,7 @@
             "Africa/Libreville"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -435,7 +435,7 @@
             "Africa/Banjul"
         ],
         "offsets": [
-            "UTC"
+            "GMT"
         ]
     },
     {
@@ -446,7 +446,7 @@
             "Asia/Tbilisi"
         ],
         "offsets": [
-            "UTC +04:00"
+            "GMT+04:00"
         ]
     },
     {
@@ -457,7 +457,7 @@
             "Europe/Berlin"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -468,7 +468,7 @@
             "Europe/Gibraltar"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -479,7 +479,7 @@
             "Europe/Athens"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -492,9 +492,9 @@
             "America/Danmarkshavn"
         ],
         "offsets": [
-            "UTC -04:00",
-            "UTC -02:00",
-            "UTC"
+            "GMT-04:00",
+            "GMT-02:00",
+            "GMT"
         ]
     },
     {
@@ -505,7 +505,7 @@
             "America/Grenada"
         ],
         "offsets": [
-            "UTC -04:00"
+            "GMT-04:00"
         ]
     },
     {
@@ -516,7 +516,7 @@
             "America/Guatemala"
         ],
         "offsets": [
-            "UTC -06:00"
+            "GMT-06:00"
         ]
     },
     {
@@ -527,7 +527,7 @@
             "Europe/Guernsey"
         ],
         "offsets": [
-            "UTC"
+            "GMT"
         ]
     },
     {
@@ -538,7 +538,7 @@
             "America/Guyana"
         ],
         "offsets": [
-            "UTC -04:00"
+            "GMT-04:00"
         ]
     },
     {
@@ -549,7 +549,7 @@
             "America/Port-au-Prince"
         ],
         "offsets": [
-            "UTC -05:00"
+            "GMT-05:00"
         ]
     },
     {
@@ -560,7 +560,7 @@
             "Europe/Vatican"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -571,7 +571,7 @@
             "America/Tegucigalpa"
         ],
         "offsets": [
-            "UTC -06:00"
+            "GMT-06:00"
         ]
     },
     {
@@ -582,7 +582,7 @@
             "Asia/Hong_Kong"
         ],
         "offsets": [
-            "UTC +08:00"
+            "GMT+08:00"
         ]
     },
     {
@@ -593,7 +593,7 @@
             "Europe/Budapest"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -604,7 +604,7 @@
             "Atlantic/Reykjavik"
         ],
         "offsets": [
-            "UTC"
+            "GMT"
         ]
     },
     {
@@ -617,9 +617,9 @@
             "Asia/Jayapura"
         ],
         "offsets": [
-            "UTC +07:00",
-            "UTC +08:00",
-            "UTC +09:00"
+            "GMT+07:00",
+            "GMT+08:00",
+            "GMT+09:00"
         ]
     },
     {
@@ -630,7 +630,7 @@
             "Europe/Dublin"
         ],
         "offsets": [
-            "UTC"
+            "GMT"
         ]
     },
     {
@@ -641,7 +641,7 @@
             "Europe/Isle_of_Man"
         ],
         "offsets": [
-            "UTC"
+            "GMT"
         ]
     },
     {
@@ -652,7 +652,7 @@
             "Europe/Rome"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -663,7 +663,7 @@
             "America/Jamaica"
         ],
         "offsets": [
-            "UTC -05:00"
+            "GMT-05:00"
         ]
     },
     {
@@ -674,7 +674,7 @@
             "Asia/Tokyo"
         ],
         "offsets": [
-            "UTC +09:00"
+            "GMT+09:00"
         ]
     },
     {
@@ -685,7 +685,7 @@
             "Europe/Jersey"
         ],
         "offsets": [
-            "UTC"
+            "GMT"
         ]
     },
     {
@@ -696,7 +696,7 @@
             "Asia/Almaty"
         ],
         "offsets": [
-            "UTC +05:00"
+            "GMT+05:00"
         ]
     },
     {
@@ -707,7 +707,7 @@
             "Asia/Seoul"
         ],
         "offsets": [
-            "UTC +09:00"
+            "GMT+09:00"
         ]
     },
     {
@@ -718,7 +718,7 @@
             "Europe/Riga"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -729,7 +729,7 @@
             "Africa/Maseru"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -740,7 +740,7 @@
             "Europe/Vaduz"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -751,7 +751,7 @@
             "Europe/Vilnius"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -762,7 +762,7 @@
             "Europe/Luxembourg"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -773,7 +773,7 @@
             "Europe/Skopje"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -784,7 +784,7 @@
             "Indian/Antananarivo"
         ],
         "offsets": [
-            "UTC +03:00"
+            "GMT+03:00"
         ]
     },
     {
@@ -795,7 +795,7 @@
             "Europe/Malta"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -809,10 +809,10 @@
             "America/Cancun"
         ],
         "offsets": [
-            "UTC -08:00",
-            "UTC -07:00",
-            "UTC -06:00",
-            "UTC -05:00"
+            "GMT-08:00",
+            "GMT-07:00",
+            "GMT-06:00",
+            "GMT-05:00"
         ]
     },
     {
@@ -823,7 +823,7 @@
             "Europe/Chisinau"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -834,7 +834,7 @@
             "Europe/Monaco"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -846,8 +846,8 @@
             "Asia/Ulaanbaatar"
         ],
         "offsets": [
-            "UTC +07:00",
-            "UTC +08:00"
+            "GMT+07:00",
+            "GMT+08:00"
         ]
     },
     {
@@ -858,7 +858,7 @@
             "Europe/Podgorica"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -869,7 +869,7 @@
             "Africa/Casablanca"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -880,7 +880,7 @@
             "Africa/Maputo"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -891,7 +891,7 @@
             "Africa/Windhoek"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -902,7 +902,7 @@
             "Europe/Amsterdam"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -914,8 +914,8 @@
             "Pacific/Chatham"
         ],
         "offsets": [
-            "UTC +13:00",
-            "UTC +13:45"
+            "GMT+13:00",
+            "GMT+13:45"
         ]
     },
     {
@@ -926,7 +926,7 @@
             "America/Managua"
         ],
         "offsets": [
-            "UTC -06:00"
+            "GMT-06:00"
         ]
     },
     {
@@ -937,7 +937,7 @@
             "Africa/Niamey"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -948,7 +948,7 @@
             "Africa/Lagos"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -959,7 +959,7 @@
             "Europe/Oslo"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -970,7 +970,7 @@
             "America/Panama"
         ],
         "offsets": [
-            "UTC -05:00"
+            "GMT-05:00"
         ]
     },
     {
@@ -982,8 +982,8 @@
             "Pacific/Bougainville"
         ],
         "offsets": [
-            "UTC +10:00",
-            "UTC +11:00"
+            "GMT+10:00",
+            "GMT+11:00"
         ]
     },
     {
@@ -994,7 +994,7 @@
             "America/Asuncion"
         ],
         "offsets": [
-            "UTC -03:00"
+            "GMT-03:00"
         ]
     },
     {
@@ -1005,7 +1005,7 @@
             "America/Lima"
         ],
         "offsets": [
-            "UTC -05:00"
+            "GMT-05:00"
         ]
     },
     {
@@ -1016,7 +1016,7 @@
             "Europe/Warsaw"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -1028,8 +1028,8 @@
             "Europe/Lisbon"
         ],
         "offsets": [
-            "UTC -01:00",
-            "UTC"
+            "GMT-01:00",
+            "GMT"
         ]
     },
     {
@@ -1040,7 +1040,7 @@
             "America/Puerto_Rico"
         ],
         "offsets": [
-            "UTC -04:00"
+            "GMT-04:00"
         ]
     },
     {
@@ -1051,7 +1051,7 @@
             "Europe/Bucharest"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -1073,17 +1073,17 @@
             "Asia/Anadyr"
         ],
         "offsets": [
-            "UTC +02:00",
-            "UTC +03:00",
-            "UTC +04:00",
-            "UTC +05:00",
-            "UTC +06:00",
-            "UTC +07:00",
-            "UTC +08:00",
-            "UTC +09:00",
-            "UTC +10:00",
-            "UTC +11:00",
-            "UTC +12:00"
+            "GMT+02:00",
+            "GMT+03:00",
+            "GMT+04:00",
+            "GMT+05:00",
+            "GMT+06:00",
+            "GMT+07:00",
+            "GMT+08:00",
+            "GMT+09:00",
+            "GMT+10:00",
+            "GMT+11:00",
+            "GMT+12:00"
         ]
     },
     {
@@ -1094,7 +1094,7 @@
             "Europe/San_Marino"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -1105,7 +1105,7 @@
             "Europe/Belgrade"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -1116,7 +1116,7 @@
             "Asia/Singapore"
         ],
         "offsets": [
-            "UTC +08:00"
+            "GMT+08:00"
         ]
     },
     {
@@ -1127,7 +1127,7 @@
             "Europe/Bratislava"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -1138,7 +1138,7 @@
             "Europe/Ljubljana"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -1149,7 +1149,7 @@
             "Africa/Johannesburg"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -1161,8 +1161,8 @@
             "Europe/Madrid"
         ],
         "offsets": [
-            "UTC",
-            "UTC +01:00"
+            "GMT",
+            "GMT+01:00"
         ]
     },
     {
@@ -1173,7 +1173,7 @@
             "America/Paramaribo"
         ],
         "offsets": [
-            "UTC -03:00"
+            "GMT-03:00"
         ]
     },
     {
@@ -1184,7 +1184,7 @@
             "Europe/Stockholm"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -1195,7 +1195,7 @@
             "Europe/Zurich"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -1206,7 +1206,7 @@
             "Africa/Tunis"
         ],
         "offsets": [
-            "UTC +01:00"
+            "GMT+01:00"
         ]
     },
     {
@@ -1217,7 +1217,7 @@
             "Europe/Istanbul"
         ],
         "offsets": [
-            "UTC +03:00"
+            "GMT+03:00"
         ]
     },
     {
@@ -1229,8 +1229,8 @@
             "Europe/Simferopol"
         ],
         "offsets": [
-            "UTC +02:00",
-            "UTC +03:00"
+            "GMT+02:00",
+            "GMT+03:00"
         ]
     },
     {
@@ -1241,7 +1241,7 @@
             "Europe/London"
         ],
         "offsets": [
-            "UTC"
+            "GMT"
         ]
     },
     {
@@ -1257,12 +1257,12 @@
             "America/New_York"
         ],
         "offsets": [
-            "UTC -10:00",
-            "UTC -09:00",
-            "UTC -08:00",
-            "UTC -07:00",
-            "UTC -06:00",
-            "UTC -05:00"
+            "GMT-10:00",
+            "GMT-09:00",
+            "GMT-08:00",
+            "GMT-07:00",
+            "GMT-06:00",
+            "GMT-05:00"
         ]
     },
     {
@@ -1273,7 +1273,7 @@
             "America/Montevideo"
         ],
         "offsets": [
-            "UTC -03:00"
+            "GMT-03:00"
         ]
     },
     {
@@ -1284,7 +1284,7 @@
             "America/Caracas"
         ],
         "offsets": [
-            "UTC -04:00"
+            "GMT-04:00"
         ]
     },
     {
@@ -1295,7 +1295,7 @@
             "Asia/Ho_Chi_Minh"
         ],
         "offsets": [
-            "UTC +07:00"
+            "GMT+07:00"
         ]
     },
     {
@@ -1306,7 +1306,7 @@
             "Africa/Harare"
         ],
         "offsets": [
-            "UTC +02:00"
+            "GMT+02:00"
         ]
     },
     {
@@ -1317,7 +1317,7 @@
             "Europe/Mariehamn"
         ],
         "offsets": [
-            "UTC +03:00"
+            "GMT+03:00"
         ]
     }
 ]

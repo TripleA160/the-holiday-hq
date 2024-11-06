@@ -56,15 +56,9 @@ export class DropdownMenu {
   toggle() {
     let iconUp = this.element.querySelector(".icon-up");
     let iconDown = this.element.querySelector(".icon-down");
-    if (this.menu.classList.contains("hidden")) {
-      iconDown.classList.add("hidden");
-      iconUp.classList.remove("hidden");
-      this.menu.classList.remove("hidden");
-    } else {
-      iconDown.classList.remove("hidden");
-      iconUp.classList.add("hidden");
-      this.menu.classList.add("hidden");
-    }
+    iconDown.classList.toggle("hidden");
+    iconUp.classList.toggle("hidden");
+    this.menu.classList.toggle("hidden");
   }
 
   addItem(item = new DropdownItem(null, this), selectIfNoneSelected = false) {
@@ -130,8 +124,10 @@ export class DropdownItem {
       }
       this.dropdownMenu = dropdownMenu ? dropdownMenu : null;
     }
-    this.element.addEventListener("click", () => {
+    this.element.addEventListener("click", (e) => {
+      e.stopPropagation();
       this.select();
+      this.dropdownMenu.toggle();
     });
   }
 
