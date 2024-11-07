@@ -42,7 +42,8 @@ export class DropdownMenu {
       this.selected = null;
     }
     if (this.selected)
-      this.button.querySelector(".ddn-selected").innerText = this.selected.name;
+      this.button.querySelector(".ddn-selected").innerHTML =
+        this.selected.element.innerHTML;
     this.button.addEventListener("click", (e) => {
       e.stopPropagation();
       this.toggle();
@@ -90,12 +91,14 @@ export class DropdownMenu {
       this.selected.element.classList.remove("selected");
       this.selected = item;
       item.element.classList.add("selected");
-      this.button.querySelector(".ddn-selected").innerText = this.selected.name;
+      this.button.querySelector(".ddn-selected").innerHTML =
+        this.selected.element.innerHTML;
       if (OnSelectFunctionEnabled) this.onSelect();
     } else {
       this.selected = item;
       item.element.classList.add("selected");
-      this.button.querySelector(".ddn-selected").innerText = this.selected.name;
+      this.button.querySelector(".ddn-selected").innerHTML =
+        this.selected.element.innerHTML;
       if (OnSelectFunctionEnabled) this.onSelect();
     }
   }
@@ -107,22 +110,35 @@ export class DropdownMenu {
 }
 
 export class DropdownItem {
-  constructor(element = null, dropdownMenu = null, name = null) {
+  constructor(
+    element = null,
+    dropdownMenu = null,
+    name = null,
+    iconSVG = null
+  ) {
     if (element) {
       this.element = element;
       this.name = element.innerText;
+      this.icon = element.querySelector("svg");
       this.dropdownMenu = dropdownMenu
         ? dropdownMenu
         : new DropdownMenu(element.parentElement);
     } else {
       this.element = document.createElement("div");
       this.element.className = "ddn-item";
+      if (iconSVG) {
+        this.icon = document.createElement("i");
+        this.icon.innerHTML += iconSVG;
+        this.element.append(this.icon);
+      } else {
+        this.icon = null;
+      }
       if (name) {
         this.name = name;
-        this.element.innerText = name;
+        this.element.innerHTML += name;
       } else {
         this.name = "New Item";
-        this.element.innerText = "New Item";
+        this.element.innerHTML += "New Item";
       }
       this.dropdownMenu = dropdownMenu ? dropdownMenu : null;
     }

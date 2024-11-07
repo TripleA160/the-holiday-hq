@@ -67,10 +67,13 @@ i {
   text-align: left;
 }
 .ddn-selected {
+  display: flex;
+  align-items: center;
   width: calc(100% - 36px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  user-select: none;
 }
 .ddn-icon {
   position: absolute;
@@ -97,13 +100,13 @@ i {
   overflow-y: auto;
   overflow-x: hidden;
   cursor: pointer;
-}
-.ddn-menu:not(.hidden) {
   animation: reveal 0.2s ease forwards,
     slide-down 0.2s var(--timing-function-fast-in-slow-out) forwards;
 }
 .ddn-item {
   display: flex;
+  align-items: center;
+  height: 55px;
   padding: 0.6em;
   user-select: none;
   transition: var(--transition-bg-color);
@@ -113,6 +116,10 @@ i {
 }
 .ddn-item.selected {
   background-color: var(--selected-color);
+}
+.ddn-selected i,
+.ddn-item i {
+  margin-right: 0.6em;
 }
 
 .region-settings-btn {
@@ -126,15 +133,22 @@ i {
   border: 0;
   background: none;
   font-size: 35px;
-  transition: transform 0.225s linear;
+  transition: transform 0.215s linear;
 }
 .region-settings-btn.clicked {
   transform: rotate(360deg);
 }
+.region-settings-flag {
+  position: absolute;
+  z-index: 1;
+  left: 40px;
+  top: 4.7px;
+  font-size: 16px;
+}
 .region-settings {
   position: absolute;
   z-index: 1;
-  left: 45px;
+  left: 40px;
   width: 360px;
   height: 140px;
   padding: 10px;
@@ -156,7 +170,7 @@ i {
   left: 170px;
   width: 170px;
   font-size: 15.5px;
-  animation: reveal 0.15s var(--timing-function-fast-in-slow-out) forwards;
+  animation: reveal 0.17s var(--timing-function-fast-in-slow-out) forwards;
 }
 .time-zone-toggle {
   position: absolute;

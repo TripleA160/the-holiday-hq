@@ -1,5 +1,5 @@
 /*
-=> add a settings menu for countries and timezones with toggle button with country flag as the menu icon
+=> add time zone toggle functionality
 => add other countries to countries.json
 => add national extra holidays for other countries
 => add more years for extra holidays
@@ -16,6 +16,7 @@ const header = document.querySelector("#header");
 const options = document.querySelector("#options");
 const content = document.querySelector("#content");
 const regionSettingsBtn = options.querySelector(".region-settings-btn");
+const regionSelectedFlag = options.querySelector(".region-settings-flag");
 const regionSettings = options.querySelector("#region-settings");
 const countryDdn = new DropdownMenu(
   regionSettings.querySelector("#country-ddn"),
@@ -189,7 +190,12 @@ async function updateCountryDropdown() {
   countryDdn.clear();
 
   for (let i = 0; i < countries.length; i++) {
-    let countryItem = new DropdownItem(null, null, countries[i].countryName);
+    let countryItem = new DropdownItem(
+      null,
+      null,
+      countries[i].countryName,
+      countries[i].flagSVG
+    );
 
     countryDdn.addItem(countryItem);
 
@@ -214,8 +220,12 @@ async function updateTimeZoneDropdown() {
 
   timeZoneDdn.clear();
   for (let i = 0; i < timeZones.length; i++) {
-    let timeZoneName = `${timeZones[i]}\n${offsets[i]}`;
-    let timeZoneItem = new DropdownItem(null, null, timeZoneName);
+    let timeZoneName = `${timeZones[i]} ${offsets[i]}`;
+    let timeZoneItem = new DropdownItem(
+      null,
+      null,
+      timeZoneName.replace(" ", "<br>")
+    );
 
     timeZoneDdn.addItem(timeZoneItem);
 
@@ -293,9 +303,12 @@ async function startCountdown() {
 }
 
 async function handleCountrySelection() {
-  countryDdn.selected?.name
-    ? localStorage.setItem("selectedCountry", countryDdn.selected.name)
-    : localStorage.setItem("selectedCountry", "None");
+  if (countryDdn.selected?.name) {
+    localStorage.setItem("selectedCountry", countryDdn.selected.name);
+    regionSelectedFlag.replaceChildren(countryDdn.selected.icon);
+  } else {
+    localStorage.setItem("selectedCountry", "None");
+  }
 
   await updateTimeZoneDropdown();
   await startCountdown();
@@ -380,7 +393,10 @@ function toggleTimeZoneDdn() {
 }
 
 document.documentElement.addEventListener("click", () => {
-  regionSettings.classList.add("hidden");
+  if (!regionSettings.classList.contains("hidden")) {
+    regionSettings.classList.add("hidden");
+    regionSettingsBtn.classList.remove("clicked");
+  }
 });
 regionSettings.addEventListener("click", (e) => {
   e.stopPropagation();
