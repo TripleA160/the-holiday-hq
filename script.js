@@ -71,8 +71,8 @@ async function fetchCountries() {
     let response = await fetch("./countries.json");
     countries = await response.json();
     countries.sort((a, b) => {
-      let aN = a.countryName.toLowerCase();
-      let bN = b.countryName.toLowerCase();
+      let aN = a.name.toLowerCase();
+      let bN = b.name.toLowerCase();
       if (aN < bN) return -1;
       if (bN > aN) return 1;
       return 0;
@@ -84,7 +84,7 @@ async function fetchCountries() {
     console.log(`\nFetched Countries`);
     console.log(countries);
   } catch (error) {
-    console.error("Error fetching time zones data", error);
+    console.error("Error fetching countries data", error);
   }
 }
 
@@ -188,11 +188,11 @@ function toSeconds(milliseconds) {
 
 async function updateCountry() {
   let selectedCountry = countries.find(
-    (c) => c.countryName === countryDdn.selected.name
+    (c) => c.name === countryDdn.selected.name
   );
   let selectedTimeZone = timeZoneDdn.selected.name;
 
-  countryCode = selectedCountry.countryCode;
+  countryCode = selectedCountry.code;
 
   timeZone = selectedTimeZone.split(" ")[0];
 
@@ -210,13 +210,13 @@ async function updateCountryDropdown() {
     let countryItem = new DropdownItem(
       null,
       null,
-      countries[i].countryName,
+      countries[i].name,
       countries[i].flagSVG
     );
 
     countryDdn.addItem(countryItem);
 
-    if (storedCountry && countries[i].countryName === storedCountry)
+    if (storedCountry && countries[i].name === storedCountry)
       countryDdn.selectItem(countryItem);
   }
 
@@ -228,7 +228,7 @@ async function updateTimeZoneDropdown() {
   let storedTimeZone = localStorage.getItem("selectedTimeZone");
 
   let selectedCountry = countries.find(
-    (c) => c.countryName === countryDdn.selected.name
+    (c) => c.name === countryDdn.selected.name
   );
   if (!selectedCountry) return;
 
