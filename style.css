@@ -97,8 +97,8 @@ i {
   overflow-y: auto;
   overflow-x: hidden;
   cursor: pointer;
-  animation: reveal 0.125s linear forwards,
-    slide-down 0.225s var(--timing-function-fast-in-slow-out) forwards;
+  animation: reveal 0.124s linear forwards,
+    slide-down 0.224s var(--timing-function-fast-in-slow-out) forwards;
 }
 .ddn-item {
   display: flex;
@@ -146,7 +146,7 @@ i {
   border: 0;
   background: none;
   font-size: 35px;
-  transition: transform 0.15s linear;
+  transition: transform 0.14s linear;
 }
 .region-settings-btn.clicked {
   transform: rotate(360deg);
@@ -161,7 +161,7 @@ i {
   left: 40px;
   top: 4.7px;
   font-size: 16px;
-  transition: transform 0.15s linear, opacity 0.15s linear;
+  transition: transform 0.14s linear, opacity 0.14s linear;
   transform: translateX(0);
   opacity: 1;
 }
@@ -176,8 +176,8 @@ i {
   background-color: var(--bg-second);
   opacity: 0;
   transform: translateY(-8px);
-  animation: reveal 0.25s ease forwards,
-    slide-down 0.25s var(--timing-function-fast-in-slow-out) forwards;
+  animation: reveal 0.24s ease forwards,
+    slide-down 0.24s var(--timing-function-fast-in-slow-out) forwards;
 }
 .country-ddn {
   z-index: 99;
@@ -190,7 +190,7 @@ i {
   left: 170px;
   width: 170px;
   font-size: 15.5px;
-  animation: reveal 0.15s var(--timing-function-fast-in-slow-out) forwards;
+  animation: reveal 0.14s var(--timing-function-fast-in-slow-out) forwards;
 }
 .time-zone-toggle {
   position: absolute;
@@ -256,7 +256,7 @@ i {
   transition: transform 0.4s linear;
 }
 .language-switch-btn:hover + .language-switch-label {
-  animation: language-slide-left 0.25s ease-out 0s 1 normal forwards;
+  animation: language-slide-left 0.24s ease-out 0s 1 normal forwards;
 }
 .language-switch-btn:hover
   + .language-switch-label
