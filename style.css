@@ -15,11 +15,11 @@
 * {
   box-sizing: border-box;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   position: relative;
   margin: 10px;
-  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {

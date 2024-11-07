@@ -62,6 +62,7 @@ export class DropdownMenu {
     this.menu.classList.toggle("hidden");
     if (this.selected && this.selected.element)
       this.selected.element.scrollIntoView({
+        behavior: "instant",
         block: "center",
       });
   }
