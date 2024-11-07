@@ -201,6 +201,8 @@ async function updateCountry() {
   offset = (offsetHours * 60 + offsetMinutes) * 60 * 1000;
 }
 
+let firstCountryUpdate = true;
+
 async function updateCountryDropdown() {
   let storedCountry = localStorage.getItem("selectedCountry");
 
@@ -217,14 +219,21 @@ async function updateCountryDropdown() {
 
     countryDdn.addItem(countryItem);
 
-    if (storedCountry && countries[i].name === storedCountry)
+    if (
+      firstCountryUpdate &&
+      storedCountry &&
+      countries[i].name === storedCountry
+    )
       countryDdn.selectItem(countryItem);
+    else if (i === countries.length - 1)
+      countryDdn.selectItem(countryDdn.items[0]);
   }
 
-  if (!countryDdn.selected) countryDdn.selectItem(countryDdn.items[0]);
+  firstCountryUpdate = false;
 }
 
-let firstUpdate = true;
+let firstTimeZoneUpdate = true;
+
 async function updateTimeZoneDropdown() {
   let storedTimeZone = localStorage.getItem("selectedTimeZone");
 
@@ -249,13 +258,17 @@ async function updateTimeZoneDropdown() {
 
     timeZoneDdn.addItem(timeZoneItem);
 
-    if (firstUpdate && storedTimeZone && timeZoneName === storedTimeZone)
+    if (
+      firstTimeZoneUpdate &&
+      storedTimeZone &&
+      timeZoneName === storedTimeZone
+    )
       timeZoneDdn.selectItem(timeZoneItem, false);
     else if (i === timeZones.length - 1)
       timeZoneDdn.selectItem(timeZoneDdn.items[0]);
   }
 
-  firstUpdate = false;
+  firstTimeZoneUpdate = false;
 }
 
 async function updateHolidayList() {
@@ -346,8 +359,11 @@ async function handleTimeZoneSelection() {
 
 async function handleUpcomingHoliday() {}
 
-function checkLanguage() {
-  if (isLocal === "false") {
+function switchLanguage() {
+  isLocal = localStorage.getItem("isLocal");
+  if (isLocal === "true") {
+    localStorage.setItem("isLocal", "false");
+    isLocal = "false";
     upcomingHolidayName = upcomingHoliday.name;
     languageLabel.querySelector(".language-switch-label-short").innerText =
       "En";
@@ -356,6 +372,7 @@ function checkLanguage() {
     languageBtn.setAttribute("title", "Switch to Local Names");
   } else {
     localStorage.setItem("isLocal", "true");
+    isLocal = "true";
     upcomingHolidayName = upcomingHoliday.localName;
     languageLabel.querySelector(".language-switch-label-short").innerText =
       "Loc";
@@ -366,11 +383,9 @@ function checkLanguage() {
   cName.innerHTML = upcomingHolidayName;
   updateHolidayList();
 }
-function switchLanguage() {
+function checkLanguage() {
   isLocal = localStorage.getItem("isLocal");
-  if (isLocal === "true") {
-    localStorage.setItem("isLocal", "false");
-    isLocal = "false";
+  if (isLocal === "false") {
     upcomingHolidayName = upcomingHoliday.name;
     languageLabel.querySelector(".language-switch-label-short").innerText =
       "En";
@@ -403,6 +418,7 @@ function toggleCountryTime() {
   let iconChecked = timeZoneToggleCheckbox.querySelector(
     ".checkbox-icon-checked"
   );
+  isCountryTime = localStorage.getItem("isCountryTime");
 
   if (isCountryTime === "false") {
     localStorage.setItem("isCountryTime", "true");
@@ -433,6 +449,8 @@ function checkCountryTime() {
     iconChecked.classList.remove("hidden");
     timeZoneDdn.element.classList.remove("hidden");
   } else {
+    localStorage.setItem("isCountryTime", "false");
+    isCountryTime = "false";
     iconUnchecked.classList.remove("hidden");
     iconChecked.classList.add("hidden");
     timeZoneDdn.element.classList.add("hidden");

@@ -195,7 +195,7 @@ i {
 .time-zone-toggle {
   position: absolute;
   z-index: 0;
-  top: 85px;
+  top: calc(100% - 10px - 10px - 27.5px);
   display: flex;
   align-items: center;
 }
@@ -203,7 +203,8 @@ i {
   padding: 0;
   border: 0;
   background: none;
-  font-size: 30px;
+  font-size: 20px;
+  margin-right: 8px;
 }
 .time-zone-toggle-label {
   font-size: 15.5px;
@@ -218,7 +219,7 @@ i {
 .language-switch-container {
   position: relative;
   height: 45px;
-  width: 150px;
+  width: 160px;
   overflow: hidden;
   user-select: none;
 }
@@ -239,8 +240,10 @@ i {
   position: relative;
   display: flex;
   align-items: center;
+  font-weight: bold;
+  font-size: 16px;
   height: 20px;
-  transform: translate(-40px, 8.75px);
+  transform: translate(-40px, 8px);
 }
 .language-switch-label-short {
   position: absolute;
@@ -383,9 +386,9 @@ i {
 }
 @keyframes language-slide-left {
   from {
-    transform: translate(200px, 8.75px);
+    transform: translate(200px, 8px);
   }
   to {
-    transform: translate(-40px, 8.75px);
+    transform: translate(-40px, 8px);
   }
 }

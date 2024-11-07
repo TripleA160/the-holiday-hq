@@ -149,6 +149,7 @@ export class DropdownItem {
     } else {
       this.element = document.createElement("div");
       this.element.className = "ddn-item";
+      this.element.setAttribute("tabindex", "0");
 
       let labelElement = document.createElement("div");
       labelElement.className = "ddn-item-label";
@@ -191,6 +192,13 @@ export class DropdownItem {
       e.stopPropagation();
       this.select();
       this.dropdownMenu.toggle();
+    });
+    this.element.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        this.select();
+        this.dropdownMenu.toggle();
+      }
     });
   }
 
