@@ -1,5 +1,4 @@
 /*
-=> add time zone toggle functionality
 => add other countries to countries.json
 => add national extra holidays for other countries
 => add more years for extra holidays
@@ -47,6 +46,7 @@ const cName = countdown.querySelector(".countdown-name");
 const cDate = countdown.querySelector(".countdown-date");
 
 let isLocal = localStorage.getItem("isLocal");
+let isCountryTime = localStorage.getItem("isCountryTime");
 
 let countries = [];
 let countriesFetched = false;
@@ -135,24 +135,41 @@ async function fetchExtraHolidays(year) {
 }
 
 async function fetchTime() {
-  try {
-    const response = await fetch("https://api.ipify.org?format=json");
-    const data = await response.json();
-    let ip = data.ip;
+  checkCountryTime();
+
+  if (isCountryTime === "false") {
+    try {
+      const response = await fetch("https://api.ipify.org?format=json");
+      const data = await response.json();
+      let ip = data.ip;
+      try {
+        let response = await fetch(
+          `https://timeapi.io/api/time/current/ip?ipAddress=${ip}`
+        );
+        let time = await response.json();
+        currDate = new Date(time.dateTime + "Z");
+        currTime = currDate.getTime();
+        console.log(`\nFetched Time`);
+        console.log(currDate.toISOString());
+      } catch (error) {
+        console.error("Error fetching time", error);
+      }
+    } catch (error) {
+      console.error("Error fetching IP address", error);
+    }
+  } else {
     try {
       let response = await fetch(
-        `https://timeapi.io/api/time/current/ip?ipAddress=${ip}`
+        `https://timeapi.io/api/time/current/zone?timeZone=GMT`
       );
       let time = await response.json();
       currDate = new Date(time.dateTime + "Z");
-      currTime = currDate.getTime();
+      currTime = currDate.getTime() + offset;
       console.log(`\nFetched Time`);
       console.log(currDate.toISOString());
     } catch (error) {
       console.error("Error fetching time", error);
     }
-  } catch (error) {
-    console.error("Error fetching IP address", error);
   }
 }
 
@@ -331,13 +348,6 @@ function checkLanguage() {
     languageLabel.querySelector(".language-switch-label-full").innerText =
       "English Names";
     languageBtn.setAttribute("title", "Switch to Local Names");
-  } else if (isLocal === "true") {
-    upcomingHolidayName = upcomingHoliday.localName;
-    languageLabel.querySelector(".language-switch-label-short").innerText =
-      "Loc";
-    languageLabel.querySelector(".language-switch-label-full").innerText =
-      "Local Names";
-    languageBtn.setAttribute("title", "Switch to English Names");
   } else {
     localStorage.setItem("isLocal", "true");
     upcomingHolidayName = upcomingHoliday.localName;
@@ -380,16 +390,47 @@ function isRTL(text) {
   return rtlPattern.test(text);
 }
 
-function toggleTimeZoneDdn() {
+function toggleCountryTime() {
   let iconUnchecked = timeZoneToggleCheckbox.querySelector(
     ".checkbox-icon-unchecked"
   );
   let iconChecked = timeZoneToggleCheckbox.querySelector(
     ".checkbox-icon-checked"
   );
-  iconUnchecked.classList.toggle("hidden");
-  iconChecked.classList.toggle("hidden");
-  timeZoneDdn.element.classList.toggle("hidden");
+
+  if (isCountryTime === "false") {
+    localStorage.setItem("isCountryTime", "true");
+    isCountryTime = "true";
+    iconUnchecked.classList.add("hidden");
+    iconChecked.classList.remove("hidden");
+    timeZoneDdn.element.classList.remove("hidden");
+  } else {
+    localStorage.setItem("isCountryTime", "false");
+    isCountryTime = "false";
+    iconUnchecked.classList.remove("hidden");
+    iconChecked.classList.add("hidden");
+    timeZoneDdn.element.classList.add("hidden");
+  }
+  startCountdown();
+}
+function checkCountryTime() {
+  let iconUnchecked = timeZoneToggleCheckbox.querySelector(
+    ".checkbox-icon-unchecked"
+  );
+  let iconChecked = timeZoneToggleCheckbox.querySelector(
+    ".checkbox-icon-checked"
+  );
+  isCountryTime = localStorage.getItem("isCountryTime");
+
+  if (isCountryTime === "true") {
+    iconUnchecked.classList.add("hidden");
+    iconChecked.classList.remove("hidden");
+    timeZoneDdn.element.classList.remove("hidden");
+  } else {
+    iconUnchecked.classList.remove("hidden");
+    iconChecked.classList.add("hidden");
+    timeZoneDdn.element.classList.add("hidden");
+  }
 }
 
 document.documentElement.addEventListener("click", () => {
@@ -408,11 +449,11 @@ regionSettingsBtn.addEventListener("click", (e) => {
 });
 timeZoneToggleCheckbox.addEventListener("click", (e) => {
   e.stopPropagation();
-  toggleTimeZoneDdn();
+  toggleCountryTime();
 });
 timeZoneToggleLabel.addEventListener("click", (e) => {
   e.stopPropagation();
-  toggleTimeZoneDdn();
+  toggleCountryTime();
 });
 languageBtn.addEventListener("click", switchLanguage);
 
