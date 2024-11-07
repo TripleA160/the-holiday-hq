@@ -190,7 +190,7 @@ async function updateCountry() {
   let selectedCountry = countries.find(
     (c) => c.name === countryDdn.selected.name
   );
-  let selectedTimeZone = timeZoneDdn.selected.name;
+  let selectedTimeZone = `${timeZoneDdn.selected.name} ${timeZoneDdn.selected.description}`;
 
   countryCode = selectedCountry.code;
 
@@ -211,7 +211,8 @@ async function updateCountryDropdown() {
       null,
       null,
       countries[i].name,
-      countries[i].flagSVG
+      countries[i].flagSVG,
+      countries[i].localName
     );
 
     countryDdn.addItem(countryItem);
@@ -241,7 +242,9 @@ async function updateTimeZoneDropdown() {
     let timeZoneItem = new DropdownItem(
       null,
       null,
-      timeZoneName.replace(" ", "<br>")
+      timeZones[i],
+      null,
+      offsets[i]
     );
 
     timeZoneDdn.addItem(timeZoneItem);
@@ -322,7 +325,7 @@ async function startCountdown() {
 async function handleCountrySelection() {
   if (countryDdn.selected?.name) {
     localStorage.setItem("selectedCountry", countryDdn.selected.name);
-    regionSelectedFlag.replaceChildren(countryDdn.selected.icon);
+    regionSelectedFlag.innerHTML = countryDdn.selected.icon.innerHTML;
   } else {
     localStorage.setItem("selectedCountry", "None");
   }
@@ -332,7 +335,10 @@ async function handleCountrySelection() {
 }
 async function handleTimeZoneSelection() {
   timeZoneDdn.selected?.name
-    ? localStorage.setItem("selectedTimeZone", timeZoneDdn.selected.name)
+    ? localStorage.setItem(
+        "selectedTimeZone",
+        `${timeZoneDdn.selected.name} ${timeZoneDdn.selected.description}`
+      )
     : localStorage.setItem("selectedTimeZone", "None");
 
   await startCountdown();
@@ -441,9 +447,13 @@ document.documentElement.addEventListener("click", () => {
 });
 regionSettings.addEventListener("click", (e) => {
   e.stopPropagation();
+  countryDdn?.close();
+  timeZoneDdn?.close();
 });
 regionSettingsBtn.addEventListener("click", (e) => {
   e.stopPropagation();
+  countryDdn?.close();
+  timeZoneDdn?.close();
   regionSettings.classList.toggle("hidden");
   regionSettingsBtn.classList.toggle("clicked");
 });

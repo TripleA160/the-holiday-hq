@@ -65,6 +65,24 @@ export class DropdownMenu {
         block: "center",
       });
   }
+  close() {
+    let iconUp = this.element.querySelector(".icon-up");
+    let iconDown = this.element.querySelector(".icon-down");
+    iconDown.classList.remove("hidden");
+    iconUp.classList.add("hidden");
+    this.menu.classList.add("hidden");
+  }
+  open() {
+    let iconUp = this.element.querySelector(".icon-up");
+    let iconDown = this.element.querySelector(".icon-down");
+    iconDown.classList.add("hidden");
+    iconUp.classList.remove("hidden");
+    this.menu.classList.remove("hidden");
+    if (this.selected && this.selected.element)
+      this.selected.element.scrollIntoView({
+        block: "center",
+      });
+  }
 
   addItem(item = new DropdownItem(null, this), selectIfNoneSelected = false) {
     item.dropdownMenu = this;
@@ -114,32 +132,58 @@ export class DropdownItem {
     element = null,
     dropdownMenu = null,
     name = null,
-    iconSVG = null
+    iconSVG = null,
+    description = null
   ) {
     if (element) {
       this.element = element;
-      this.name = element.innerText;
-      this.icon = element.querySelector("svg");
+      this.name = element.querySelector(".ddn-item-name").innerText;
+      this.description = element.querySelector(
+        ".ddn-item-description"
+      ).innerText;
+      this.icon = element.querySelector(".ddn-item-icon");
       this.dropdownMenu = dropdownMenu
         ? dropdownMenu
         : new DropdownMenu(element.parentElement);
     } else {
       this.element = document.createElement("div");
       this.element.className = "ddn-item";
+
+      let labelElement = document.createElement("div");
+      labelElement.className = "ddn-item-label";
+
       if (iconSVG) {
         this.icon = document.createElement("i");
+        this.icon.className = "ddn-item-icon";
         this.icon.innerHTML += iconSVG;
         this.element.append(this.icon);
       } else {
         this.icon = null;
       }
       if (name) {
+        let nameElement = document.createElement("div");
+        nameElement.className = "ddn-item-name";
         this.name = name;
-        this.element.innerHTML += name;
+        nameElement.innerHTML += name;
+        labelElement.append(nameElement);
       } else {
+        let nameElement = document.createElement("div");
+        nameElement.className = "ddn-item-name";
         this.name = "New Item";
-        this.element.innerHTML += "New Item";
+        nameElement.innerHTML += "New Item";
+        labelElement.append(nameElement);
       }
+      if (description) {
+        let descriptionElement = document.createElement("div");
+        descriptionElement.className = "ddn-item-description";
+        this.description = description;
+        descriptionElement.innerHTML += description;
+        labelElement.append(descriptionElement);
+      } else {
+        this.description = null;
+      }
+      this.element.append(labelElement);
+
       this.dropdownMenu = dropdownMenu ? dropdownMenu : null;
     }
     this.element.addEventListener("click", (e) => {
