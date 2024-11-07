@@ -59,6 +59,10 @@ export class DropdownMenu {
     iconDown.classList.toggle("hidden");
     iconUp.classList.toggle("hidden");
     this.menu.classList.toggle("hidden");
+    if (this.selected && this.selected.element)
+      this.selected.element.scrollIntoView({
+        block: "center",
+      });
   }
 
   addItem(item = new DropdownItem(null, this), selectIfNoneSelected = false) {
@@ -85,13 +89,11 @@ export class DropdownMenu {
       if (this.selected === item) return;
       this.selected.element.classList.remove("selected");
       this.selected = item;
-      console.log(`Previous: ${this.selected.name}, New: ${item.name}`);
       item.element.classList.add("selected");
       this.button.querySelector(".ddn-selected").innerText = this.selected.name;
       if (OnSelectFunctionEnabled) this.onSelect();
     } else {
       this.selected = item;
-      console.log(`Selected first time: ${item.name}`);
       item.element.classList.add("selected");
       this.button.querySelector(".ddn-selected").innerText = this.selected.name;
       if (OnSelectFunctionEnabled) this.onSelect();

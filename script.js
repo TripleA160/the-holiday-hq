@@ -388,6 +388,7 @@ regionSettings.addEventListener("click", (e) => {
 regionSettingsBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   regionSettings.classList.toggle("hidden");
+  regionSettingsBtn.classList.toggle("clicked");
 });
 timeZoneToggleCheckbox.addEventListener("click", (e) => {
   e.stopPropagation();

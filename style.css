@@ -8,6 +8,7 @@
   --transition-scale: transform 0.2s ease;
   --transition-border-color: border-color 0.2s linear;
   --transition-bg-color: background-color 0.4s cubic-bezier(0.1, 0.1, 0.2, 1);
+  --timing-function-fast-in-slow-out: cubic-bezier(0.1, 0.1, 0.2, 1);
 }
 * {
   box-sizing: border-box;
@@ -16,6 +17,7 @@
 body {
   position: relative;
   margin: 10px;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
@@ -96,6 +98,10 @@ i {
   overflow-x: hidden;
   cursor: pointer;
 }
+.ddn-menu:not(.hidden) {
+  animation: reveal 0.2s ease forwards,
+    slide-down 0.2s var(--timing-function-fast-in-slow-out) forwards;
+}
 .ddn-item {
   display: flex;
   padding: 0.6em;
@@ -120,6 +126,10 @@ i {
   border: 0;
   background: none;
   font-size: 35px;
+  transition: transform 0.225s linear;
+}
+.region-settings-btn.clicked {
+  transform: rotate(360deg);
 }
 .region-settings {
   position: absolute;
@@ -130,6 +140,10 @@ i {
   padding: 10px;
   border-radius: 5px;
   background-color: var(--bg-second);
+  opacity: 0;
+  transform: translateY(-8px);
+  animation: reveal 0.275s ease forwards,
+    slide-down 0.275s var(--timing-function-fast-in-slow-out) forwards;
 }
 .country-ddn {
   z-index: 99;
@@ -142,6 +156,7 @@ i {
   left: 170px;
   width: 170px;
   font-size: 15.5px;
+  animation: reveal 0.15s var(--timing-function-fast-in-slow-out) forwards;
 }
 .time-zone-toggle {
   position: absolute;
@@ -207,7 +222,7 @@ i {
   transition: transform 0.4s linear;
 }
 .language-switch-btn:hover + .language-switch-label {
-  animation: language-slide 0.275s ease-out 0s 1 normal forwards;
+  animation: language-slide-left 0.275s ease-out 0s 1 normal forwards;
 }
 .language-switch-btn:hover
   + .language-switch-label
@@ -218,14 +233,6 @@ i {
   + .language-switch-label
   > .language-switch-label-short {
   opacity: 0;
-}
-@keyframes language-slide {
-  from {
-    transform: translate(200px, 8.75px);
-  }
-  to {
-    transform: translate(-40px, 8.75px);
-  }
 }
 
 #content {
@@ -314,4 +321,37 @@ i {
 .holidays-item-name:hover {
   transform: scale(1.06);
   border-color: #a1c1e1;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-8px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes language-slide-left {
+  from {
+    transform: translate(200px, 8.75px);
+  }
+  to {
+    transform: translate(-40px, 8.75px);
+  }
 }
