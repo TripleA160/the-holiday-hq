@@ -48,7 +48,12 @@ const cDate = countdown.querySelector(".countdown-date");
 let isLocal = localStorage.getItem("isLocal");
 let isCountryTime = localStorage.getItem("isCountryTime");
 
+let userIP = null;
+let userCountry = null;
+
 let countries = [];
+
+let userIPFetched = false;
 let countriesFetched = false;
 
 let countryCode = null;
@@ -64,6 +69,24 @@ let offset = 0;
 
 let updateInterval = null;
 let fetchInterval = null;
+
+async function fetchUserIP() {
+  if (userIPFetched) return;
+  try {
+    const response = await fetch("https://api.ipapi.is/?key=d7a4c822df3e60c3");
+    const data = await response.json();
+    userIP = data.ip;
+    userCountry = data.location.country;
+    userIPFetched = true;
+
+    await fetchCountries();
+
+    console.log(`\nFetched IP`);
+    console.log(userIP + "\n" + userCountry);
+  } catch (error) {
+    console.error("Error fetching IP address,\nCountry time will be used", error);
+  }
+}
 
 async function fetchCountries() {
   if (countriesFetched) return;
@@ -137,14 +160,10 @@ async function fetchExtraHolidays(year) {
 async function fetchTime() {
   checkCountryTime();
 
-  if (isCountryTime === "false") {
+  if (isCountryTime === "false" && userIP != null) {
     try {
-      const response = await fetch("https://api.ipify.org?format=json");
-      const data = await response.json();
-      let ip = data.ip;
-      try {
         let response = await fetch(
-          `https://timeapi.io/api/time/current/ip?ipAddress=${ip}`
+          `https://timeapi.io/api/time/current/ip?ipAddress=${userIP}`
         );
         let time = await response.json();
         currDate = new Date(time.dateTime + "Z");
@@ -154,9 +173,6 @@ async function fetchTime() {
       } catch (error) {
         console.error("Error fetching time", error);
       }
-    } catch (error) {
-      console.error("Error fetching IP address", error);
-    }
   } else {
     try {
       let response = await fetch(
@@ -225,12 +241,21 @@ async function updateCountryDropdown() {
       countries[i].name === storedCountry
     )
       countryDdn.selectItem(countryItem);
-    else if (i === countries.length - 1)
-      countries.find((country) =>
-        country.name.includes(countryDdn.selected.name)
+    else if (i === countries.length - 1) {
+      let isSelectedValid = countries.find((country) =>
+        country.name.trim().toLowerCase() === countryDdn.selected.name.trim().toLowerCase()
       )
-        ? true
-        : countryDdn.selectItem(countryDdn.items[0]);
+      if (isSelectedValid) return;
+      else if (userCountry != null) {
+        let isUserCountryValid = countries.find((country) => country.name.trim().toLowerCase() === userCountry.trim().toLowerCase());
+        if (isUserCountryValid) {
+          countryDdn.selectItem(countryDdn.items.find((item) => item.name.trim().toLowerCase() === userCountry.trim().toLowerCase()));
+        }
+      } else {
+        console.log("User country is NULL,\nFirst country is selected");
+        countryDdn.selectItem(countryDdn.items[0]);
+      }
+    }
   }
 
   firstCountryUpdate = false;
@@ -268,13 +293,15 @@ async function updateTimeZoneDropdown() {
       timeZoneName === storedTimeZone
     )
       timeZoneDdn.selectItem(timeZoneItem, false);
-    else if (
-      i === timeZones.length - 1 &&
-      !timeZones.includes(timeZoneDdn.selected.name)
-    )
-      timeZones.find((timeZone) => timeZone.includes(timeZoneDdn.selected.name))
-        ? true
-        : timeZoneDdn.selectItem(timeZoneDdn.items[0]);
+    else if (i === timeZones.length - 1) {
+      let isSelectedValid = timeZones.find((timeZone) =>
+        timeZone.trim().toLowerCase() === timeZoneDdn.selected.name.trim().toLowerCase()
+      )
+      if (isSelectedValid) return;
+      else {
+        timeZoneDdn.selectItem(timeZoneDdn.items[0]);
+      }
+    }
   }
 
   firstTimeZoneUpdate = false;
@@ -333,6 +360,7 @@ async function clearIntervals() {
 async function startCountdown() {
   upcomingHoliday = null;
   holidays = null;
+  await fetchUserIP();
   await fetchCountries();
   await updateCountry();
   await fetchTime();
@@ -494,4 +522,4 @@ timeZoneToggleLabel.addEventListener("click", (e) => {
 });
 languageBtn.addEventListener("click", switchLanguage);
 
-fetchCountries();
+fetchUserIP();
