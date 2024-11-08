@@ -226,7 +226,11 @@ async function updateCountryDropdown() {
     )
       countryDdn.selectItem(countryItem);
     else if (i === countries.length - 1)
-      countryDdn.selectItem(countryDdn.items[0]);
+      countries.find((country) =>
+        country.name.includes(countryDdn.selected.name)
+      )
+        ? true
+        : countryDdn.selectItem(countryDdn.items[0]);
   }
 
   firstCountryUpdate = false;
@@ -264,8 +268,13 @@ async function updateTimeZoneDropdown() {
       timeZoneName === storedTimeZone
     )
       timeZoneDdn.selectItem(timeZoneItem, false);
-    else if (i === timeZones.length - 1)
-      timeZoneDdn.selectItem(timeZoneDdn.items[0]);
+    else if (
+      i === timeZones.length - 1 &&
+      !timeZones.includes(timeZoneDdn.selected.name)
+    )
+      timeZones.find((timeZone) => timeZone.includes(timeZoneDdn.selected.name))
+        ? true
+        : timeZoneDdn.selectItem(timeZoneDdn.items[0]);
   }
 
   firstTimeZoneUpdate = false;
