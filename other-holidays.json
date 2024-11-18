@@ -1,0 +1,2269 @@
+{
+    "AE": {
+        "2024": [
+            {
+                "date": "2024-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-07",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-09-15",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-12-01",
+                "localName": "يوم الشهيد",
+                "name": "Commemoration Day"
+            },
+            {
+                "date": "2024-12-02",
+                "localName": "اليوم الوطني",
+                "name": "National Day",
+                "toDate": "2024-12-03"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-26",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-09-06",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2025-12-01",
+                "localName": "يوم الشهيد",
+                "name": "Commemoration Day"
+            },
+            {
+                "date": "2025-12-02",
+                "localName": "اليوم الوطني",
+                "name": "National Day",
+                "toDate": "2025-12-03"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2026-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-08-25",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2026-12-01",
+                "localName": "يوم الشهيد",
+                "name": "Commemoration Day"
+            },
+            {
+                "date": "2026-12-02",
+                "localName": "اليوم الوطني",
+                "name": "National Day",
+                "toDate": "2026-12-03"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2027-03-11"
+            },
+            {
+                "date": "2027-05-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-19"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-08-14",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2027-12-01",
+                "localName": "يوم الشهيد",
+                "name": "Commemoration Day"
+            },
+            {
+                "date": "2027-12-02",
+                "localName": "اليوم الوطني",
+                "name": "National Day",
+                "toDate": "2027-12-03"
+            }
+        ]
+    },
+    "EG": {
+        "2024": [
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-05-06",
+                "localName": "شم النسيم",
+                "name": "Sham El-Nessim"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-11",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-09-15",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-04-21",
+                "localName": "شم النسيم",
+                "name": "Sham El-Nessim"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-27",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-09-06",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-04-13",
+                "localName": "شم النسيم",
+                "name": "Sham El-Nessim"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-08-25",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-03-11"
+            },
+            {
+                "date": "2027-05-03",
+                "localName": "شم النسيم",
+                "name": "Sham El-Nessim"
+            },
+            {
+                "date": "2027-05-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-19"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-08-14",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            }
+        ]
+    },
+    "IQ": {
+        "2024": [
+            {
+                "date": "2024-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2024-01-06",
+                "localName": "عيد الجيش",
+                "name": "Armed Forces Day"
+            },
+            {
+                "date": "2024-03-21",
+                "localName": "عيد نوروز",
+                "name": "Spring Day"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-07",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-07-14",
+                "localName": "اعلان تأسيس جمهورية العراق",
+                "name": "The Establishment of the Republic of Iraq"
+            },
+            {
+                "date": "2024-07-16",
+                "localName": "يوم عاشوراء",
+                "name": "Ashura Day"
+            },
+            {
+                "date": "2024-09-15",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-10-03",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            },
+            {
+                "date": "2024-12-10",
+                "localName": "يوم النصر",
+                "name": "Victory Day"
+            },
+            {
+                "date": "2024-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2025-01-06",
+                "localName": "عيد الجيش",
+                "name": "Armed Forces Day"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-26",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-07-06",
+                "localName": "يوم عاشوراء",
+                "name": "Ashura Day"
+            },
+            {
+                "date": "2025-07-14",
+                "localName": "اعلان تأسيس جمهورية العراق",
+                "name": "The Establishment of the Republic of Iraq"
+            },
+            {
+                "date": "2025-09-06",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2025-10-03",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            },
+            {
+                "date": "2025-12-10",
+                "localName": "يوم النصر",
+                "name": "Victory Day"
+            },
+            {
+                "date": "2025-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2026-01-06",
+                "localName": "عيد الجيش",
+                "name": "Armed Forces Day"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-06-25",
+                "localName": "يوم عاشوراء",
+                "name": "Ashura Day"
+            },
+            {
+                "date": "2026-07-14",
+                "localName": "اعلان تأسيس جمهورية العراق",
+                "name": "The Establishment of the Republic of Iraq"
+            },
+            {
+                "date": "2026-08-25",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2026-10-03",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            },
+            {
+                "date": "2026-12-10",
+                "localName": "يوم النصر",
+                "name": "Victory Day"
+            },
+            {
+                "date": "2026-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2027-01-06",
+                "localName": "عيد الجيش",
+                "name": "Armed Forces Day"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-03-11"
+            },
+            {
+                "date": "2027-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2027-05-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-05-19"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-06-15",
+                "localName": "يوم عاشوراء",
+                "name": "Ashura Day"
+            },
+            {
+                "date": "2027-07-14",
+                "localName": "اعلان تأسيس جمهورية العراق",
+                "name": "The Establishment of the Republic of Iraq"
+            },
+            {
+                "date": "2027-08-14",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2027-10-03",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            },
+            {
+                "date": "2027-12-10",
+                "localName": "يوم النصر",
+                "name": "Victory Day"
+            },
+            {
+                "date": "2027-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ]
+    },
+    "JO": {
+        "2024": [
+            {
+                "date": "2024-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2024-03-31",
+                "localName": "أحد الشعانين",
+                "name": "Easter Sunday"
+            },
+            {
+                "date": "2024-04-01",
+                "localName": "إثنين الفصح",
+                "name": "Easter Monday"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2024-05-25",
+                "localName": "عيد استقلال المملكة",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-07",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-09-15",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-04-20",
+                "localName": "أحد الشعانين",
+                "name": "Easter Sunday"
+            },
+            {
+                "date": "2025-04-21",
+                "localName": "إثنين الفصح",
+                "name": "Easter Monday"
+            },
+            {
+                "date": "2025-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2025-05-25",
+                "localName": "عيد استقلال المملكة",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-26",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-09-06",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2025-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-04-05",
+                "localName": "أحد الشعانين",
+                "name": "Easter Sunday"
+            },
+            {
+                "date": "2026-04-06",
+                "localName": "إثنين الفصح",
+                "name": "Easter Monday"
+            },
+            {
+                "date": "2026-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2026-05-25",
+                "localName": "عيد استقلال المملكة",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2026-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-08-25",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2026-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2027-03-11"
+            },
+            {
+                "date": "2027-03-28",
+                "localName": "أحد الشعانين",
+                "name": "Easter Sunday"
+            },
+            {
+                "date": "2027-03-29",
+                "localName": "إثنين الفصح",
+                "name": "Easter Monday"
+            },
+            {
+                "date": "2027-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-17",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-20"
+            },
+            {
+                "date": "2027-05-25",
+                "localName": "عيد استقلال المملكة",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-08-14",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2027-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ]
+    },
+    "KW": {
+        "2024": [
+            {
+                "date": "2024-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2024-02-08",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            },
+            {
+                "date": "2024-02-25",
+                "localName": "اليوم الوطني",
+                "name": "National Day",
+                "toDate": "2024-12-03"
+            },
+            {
+                "date": "2024-02-26",
+                "localName": "يوم التحرير",
+                "name": "Liberation Day",
+                "toDate": "2024-12-03"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-07",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-09-15",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2025-01-27",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            },
+            {
+                "date": "2025-02-25",
+                "localName": "اليوم الوطني",
+                "name": "National Day",
+                "toDate": "2025-12-03"
+            },
+            {
+                "date": "2025-02-26",
+                "localName": "يوم التحرير",
+                "name": "Liberation Day",
+                "toDate": "2025-12-03"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-26",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-09-06",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2026-01-16",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            },
+            {
+                "date": "2026-02-25",
+                "localName": "اليوم الوطني",
+                "name": "National Day",
+                "toDate": "2026-12-03"
+            },
+            {
+                "date": "2026-02-26",
+                "localName": "يوم التحرير",
+                "name": "Liberation Day",
+                "toDate": "2026-12-03"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2026-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-08-25",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2027-01-05",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            },
+            {
+                "date": "2027-02-25",
+                "localName": "اليوم الوطني",
+                "name": "National Day",
+                "toDate": "2027-12-03"
+            },
+            {
+                "date": "2027-02-26",
+                "localName": "يوم التحرير",
+                "name": "Liberation Day",
+                "toDate": "2027-12-03"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2027-03-11"
+            },
+            {
+                "date": "2027-05-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-19"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-08-14",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2027-12-25",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            }
+        ]
+    },
+    "LY": {
+        "2024": [
+            {
+                "date": "2024-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2024-02-17",
+                "localName": "عيد الثورة الليبية",
+                "name": "Revolution Day"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2024-09-16",
+                "localName": "يوم الشهيد",
+                "name": "Martyrs' Day"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-07",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-09-15",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-10-23",
+                "localName": "عيد التحرير",
+                "name": "Liberation Day"
+            },
+            {
+                "date": "2024-12-24",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2025-02-17",
+                "localName": "عيد الثورة الليبية",
+                "name": "Revolution Day"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-26",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-09-06",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2025-09-16",
+                "localName": "يوم الشهيد",
+                "name": "Martyrs' Day"
+            },
+            {
+                "date": "2025-10-23",
+                "localName": "عيد التحرير",
+                "name": "Liberation Day"
+            },
+            {
+                "date": "2025-12-24",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2026-02-17",
+                "localName": "عيد الثورة الليبية",
+                "name": "Revolution Day"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2026-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-08-25",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2026-09-16",
+                "localName": "يوم الشهيد",
+                "name": "Martyrs' Day"
+            },
+            {
+                "date": "2026-10-23",
+                "localName": "عيد التحرير",
+                "name": "Liberation Day"
+            },
+            {
+                "date": "2026-12-24",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2027-02-17",
+                "localName": "عيد الثورة الليبية",
+                "name": "Revolution Day"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2027-03-11"
+            },
+            {
+                "date": "2027-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-17",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-20"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-08-14",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2027-09-16",
+                "localName": "يوم الشهيد",
+                "name": "Martyrs' Day"
+            },
+            {
+                "date": "2027-10-23",
+                "localName": "عيد التحرير",
+                "name": "Liberation Day"
+            },
+            {
+                "date": "2027-12-24",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            }
+        ]
+    },
+    "PS": {
+        "2024": [
+            {
+                "date": "2024-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2024-02-08",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-07",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-09-15",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-11-15",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2024-12-25",
+                "localName": "الإسراء والمعراج | عيد الميلاد المجيد",
+                "name": "The Prophet's Ascension | Christmas Day"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2025-01-27",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-26",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-09-06",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2025-11-15",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2025-12-25",
+                "localName": "الإسراء والمعراج | عيد الميلاد المجيد",
+                "name": "The Prophet's Ascension | Christmas Day"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2026-01-16",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2026-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-08-25",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2026-11-15",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2026-12-25",
+                "localName": "الإسراء والمعراج | عيد الميلاد المجيد",
+                "name": "The Prophet's Ascension | Christmas Day"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2027-01-05",
+                "localName": "الإسراء والمعراج",
+                "name": "The Prophet's Ascension"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2027-03-11"
+            },
+            {
+                "date": "2027-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2027-05-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-19"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-08-14",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2027-11-15",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2027-12-25",
+                "localName": "الإسراء والمعراج | عيد الميلاد المجيد",
+                "name": "The Prophet's Ascension | Christmas Day"
+            }
+        ]
+    },
+    "QA": {
+        "2024": [
+            {
+                "date": "2024-02-13",
+                "localName": "يوم الرياضة الوطني",
+                "name": "National Sports Day"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-12-18",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-02-11",
+                "localName": "يوم الرياضة الوطني",
+                "name": "National Sports Day"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-12-18",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-02-10",
+                "localName": "يوم الرياضة الوطني",
+                "name": "National Sports Day"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2026-05-31"
+            },
+            {
+                "date": "2026-12-18",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-02-09",
+                "localName": "يوم الرياضة الوطني",
+                "name": "National Sports Day"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2027-03-11"
+            },
+            {
+                "date": "2027-05-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-19"
+            },
+            {
+                "date": "2027-12-18",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            }
+        ]
+    },
+    "SA": {
+        "2024": [
+            {
+                "date": "2024-02-22",
+                "localName": "يوم التأسيس",
+                "name": "Founding Day"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-07",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-09-23",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-02-22",
+                "localName": "يوم التأسيس",
+                "name": "Founding Day"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-26",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-09-23",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-02-22",
+                "localName": "يوم التأسيس",
+                "name": "Founding Day"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2026-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-09-23",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-02-22",
+                "localName": "يوم التأسيس",
+                "name": "Founding Day"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2027-03-11"
+            },
+            {
+                "date": "2027-05-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-19"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-09-23",
+                "localName": "اليوم الوطني",
+                "name": "National Day"
+            }
+        ]
+    },
+    "SY": {
+        "2024": [
+            {
+                "date": "2024-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2024-03-08",
+                "localName": "عيد الثورة",
+                "name": "Revolution Day"
+            },
+            {
+                "date": "2024-03-21",
+                "localName": "عيد الأم",
+                "name": "Mother's Day"
+            },
+            {
+                "date": "2024-03-31",
+                "localName": "الكنيسة الغربية - عيد القيامة",
+                "name": "Easter Sunday"
+            },
+            {
+                "date": "2024-04-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2024-04-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2024-04-12"
+            },
+            {
+                "date": "2024-04-17",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2024-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2024-05-05",
+                "localName": "الكنيسة الشرقية - عيد القيامة",
+                "name": "Orthodox Easter Sunday"
+            },
+            {
+                "date": "2024-05-06",
+                "localName": "يوم الشهيد",
+                "name": "Martyrs' Day"
+            },
+            {
+                "date": "2024-06-15",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2024-06-16",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2024-06-19"
+            },
+            {
+                "date": "2024-07-07",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2024-09-15",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-10-06",
+                "localName": "ذكرى حرب تشرين",
+                "name": "Tishreen Liberation Day"
+            },
+            {
+                "date": "2024-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2025": [
+            {
+                "date": "2025-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2025-03-08",
+                "localName": "عيد الثورة",
+                "name": "Revolution Day"
+            },
+            {
+                "date": "2025-03-21",
+                "localName": "عيد الأم",
+                "name": "Mother's Day"
+            },
+            {
+                "date": "2025-03-30",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2025-03-31",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2025-04-2"
+            },
+            {
+                "date": "2025-04-17",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2025-04-20",
+                "localName": "عيد القيامة",
+                "name": "Easter Sunday"
+            },
+            {
+                "date": "2025-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2025-05-06",
+                "localName": "يوم الشهيد",
+                "name": "Martyrs' Day"
+            },
+            {
+                "date": "2025-06-06",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2025-06-07",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2025-06-10"
+            },
+            {
+                "date": "2025-06-26",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2025-09-06",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-10-06",
+                "localName": "ذكرى حرب تشرين",
+                "name": "Tishreen Liberation Day"
+            },
+            {
+                "date": "2025-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2026": [
+            {
+                "date": "2026-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2026-03-08",
+                "localName": "عيد الثورة",
+                "name": "Revolution Day"
+            },
+            {
+                "date": "2026-03-20",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2026-03-21",
+                "localName": "عيد الفطر المبارك | عيد الأم",
+                "name": "Eid Al-Fitr | Mother's Day",
+                "toDate": "2026-03-23"
+            },
+            {
+                "date": "2026-04-05",
+                "localName": "الكنيسة الغربية - عيد القيامة",
+                "name": "Easter Sunday"
+            },
+            {
+                "date": "2026-04-12",
+                "localName": "الكنيسة الشرقية - عيد القيامة",
+                "name": "Orthodox Easter Sunday"
+            },
+            {
+                "date": "2026-04-17",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2026-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2026-05-06",
+                "localName": "يوم الشهيد",
+                "name": "Martyrs' Day"
+            },
+            {
+                "date": "2026-05-27",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2026-05-28",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2026-05-31"
+            },
+            {
+                "date": "2026-06-16",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2026-08-25",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-10-06",
+                "localName": "ذكرى حرب تشرين",
+                "name": "Tishreen Liberation Day"
+            },
+            {
+                "date": "2026-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ],
+        "2027": [
+            {
+                "date": "2027-01-01",
+                "localName": "رأس السنة الميلادية",
+                "name": "New Year's Day"
+            },
+            {
+                "date": "2027-03-08",
+                "localName": "عيد الثورة",
+                "name": "Revolution Day"
+            },
+            {
+                "date": "2027-03-09",
+                "localName": "وقفة عيد الفطر المبارك",
+                "name": "Eid Al-Fitr Eve"
+            },
+            {
+                "date": "2027-03-10",
+                "localName": "عيد الفطر المبارك",
+                "name": "Eid Al-Fitr",
+                "toDate": "2027-03-11"
+            },
+            {
+                "date": "2027-03-21",
+                "localName": "عيد الأم",
+                "name": "Mother's Day"
+            },
+            {
+                "date": "2027-03-28",
+                "localName": "الكنيسة الغربية - عيد القيامة",
+                "name": "Easter Sunday"
+            },
+            {
+                "date": "2027-04-17",
+                "localName": "عيد الاستقلال",
+                "name": "Independence Day"
+            },
+            {
+                "date": "2027-05-01",
+                "localName": "عيد العمال",
+                "name": "Labour Day"
+            },
+            {
+                "date": "2027-05-02",
+                "localName": "الكنيسة الشرقية - عيد القيامة",
+                "name": "Orthodox Easter Sunday"
+            },
+            {
+                "date": "2027-05-06",
+                "localName": "يوم الشهيد",
+                "name": "Martyrs' Day"
+            },
+            {
+                "date": "2027-05-16",
+                "localName": "وقفة عرفات | وقفة عيد الأضحى",
+                "name": "Arafat Day | Eid Al-Adha Eve"
+            },
+            {
+                "date": "2027-05-17",
+                "localName": "عيد الأضحى المبارك",
+                "name": "Eid Al-Adha",
+                "toDate": "2027-05-20"
+            },
+            {
+                "date": "2027-06-06",
+                "localName": "رأس السنة الهجرية",
+                "name": "Islamic New Year"
+            },
+            {
+                "date": "2027-08-14",
+                "localName": "المولد النبوي الشريف",
+                "name": "Al-Mawlid Al-Nabawi (Prophet Muhammad's Birthday)"
+            },
+            {
+                "date": "2024-10-06",
+                "localName": "ذكرى حرب تشرين",
+                "name": "Tishreen Liberation Day"
+            },
+            {
+                "date": "2027-12-25",
+                "localName": "عيد الميلاد المجيد",
+                "name": "Christmas Day"
+            }
+        ]
+    }
+}

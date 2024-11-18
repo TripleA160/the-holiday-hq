@@ -1,7 +1,5 @@
 /*
-=> add other countries to countries.json
-=> add national extra holidays for other countries
-=> add more years for extra holidays
+=> add code to deal with other holidays date
 */
 
 import {
@@ -10,6 +8,8 @@ import {
   HolidayList,
   HolidayItem,
 } from "./module.js";
+import countriesData from './countries.json' with { type: 'json' };
+import otherHolidaysData from './other-holidays.json' with { type: 'json' };
 
 const header = document.querySelector("#header");
 const options = document.querySelector("#options");
@@ -51,7 +51,12 @@ let isCountryTime = localStorage.getItem("isCountryTime");
 let userIP = null;
 let userCountry = null;
 
-let countries = [];
+let countries = countriesData.sort((a, b) => {
+      let aN = a.name.toLowerCase();
+      let bN = b.name.toLowerCase();
+      if (aN < bN) return -1;
+      if (bN > aN) return 1;
+      return 0});
 
 let userIPFetched = false;
 let countriesFetched = false;
@@ -64,7 +69,7 @@ let currTime = null;
 let upcomingHoliday = null;
 let upcomingHolidayName = null;
 let upcomingHolidayTime = null;
-let holidays = null;
+let holidays = [];
 let offset = 0;
 
 let updateInterval = null;
@@ -79,7 +84,7 @@ async function fetchUserIP() {
     userCountry = data.location.country;
     userIPFetched = true;
 
-    await fetchCountries();
+    await updateCountryDropdown();
 
     console.log(`\nFetched IP`);
     console.log(userIP + "\n" + userCountry);
@@ -88,39 +93,19 @@ async function fetchUserIP() {
   }
 }
 
-async function fetchCountries() {
-  if (countriesFetched) return;
-  try {
-    let response = await fetch("./countries.json");
-    countries = await response.json();
-    countries.sort((a, b) => {
-      let aN = a.name.toLowerCase();
-      let bN = b.name.toLowerCase();
-      if (aN < bN) return -1;
-      if (bN > aN) return 1;
-      return 0;
-    });
-    countriesFetched = true;
-
-    await updateCountryDropdown();
-
-    console.log(`\nFetched Countries`);
-    console.log(countries);
-  } catch (error) {
-    console.error("Error fetching countries data", error);
-  }
-}
-
-async function fetchHolidays(year, lastYear = 2040) {
-  try {
-    let yearNum = parseInt(year);
-    while (!upcomingHoliday && yearNum < lastYear) {
+async function fetchHolidays(firstYear, lastYear = 2040) {
+  let year = parseInt(firstYear);
+  let apiFailed = false;
+  while (!upcomingHoliday && year < lastYear) {
+    try {
       let response = await fetch(
-        `https://date.nager.at/api/v3/PublicHolidays/${yearNum}/${countryCode}`
+        `https://date.nager.at/api/v3/PublicHolidays/${year}/${countryCode}`
       );
       holidays = await response.json();
-      await fetchExtraHolidays(yearNum);
+      if (otherHolidaysData[countryCode])
+        otherHolidaysData[countryCode][year]?.forEach((h)=>holidays.push(h));
       holidays.sort((a, b) => new Date(a.date) - new Date(b.date));
+
       for (let i = 0; i < holidays.length; i++) {
         if (new Date(holidays[i].date).getTime() > currTime) {
           upcomingHoliday = holidays[i];
@@ -128,6 +113,7 @@ async function fetchHolidays(year, lastYear = 2040) {
         }
       }
       await updateHolidayList();
+
       if (upcomingHoliday) {
         let date = upcomingHoliday.date.split("-");
         upcomingHolidayName =
@@ -135,25 +121,42 @@ async function fetchHolidays(year, lastYear = 2040) {
         upcomingHolidayTime = Date.UTC(date[0], date[1] - 1, date[2], 0, 0, 0);
         cName.innerHTML = upcomingHolidayName;
         cDate.innerHTML = `(${upcomingHoliday.date.replaceAll("-", "/")})`;
-        console.log(`\nFetched Holidays`);
-        console.log(holidays);
-      } else yearNum++;
+      } else year++;
+    } catch {
+      apiFailed = true;
+      break;
     }
-  } catch (error) {
-    holidays = [];
-    console.error("Error fetching holidays data", error);
   }
-}
 
-async function fetchExtraHolidays(year) {
-  try {
-    let response = await fetch("./extra-holidays.json");
-    let extraHolidays = await response.json();
-    extraHolidays[year].forEach((h) => {
-      if (h.countries.includes(countryDdn.selected.name)) holidays.push(h);
-    });
-  } catch (error) {
-    console.error("Error fetching extra holidays", error);
+  if (apiFailed) {
+    year = parseInt(firstYear);
+
+    if (otherHolidaysData[countryCode][year]) {
+      while (!upcomingHoliday && year < lastYear) {
+        holidays = otherHolidaysData[countryCode][year];
+      holidays.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+      for (let i = 0; i < holidays.length; i++) {
+        if (new Date(holidays[i].date).getTime() > currTime) {
+          upcomingHoliday = holidays[i];
+          break;
+        }
+      }
+      await updateHolidayList();
+
+      if (upcomingHoliday) {
+        let date = upcomingHoliday.date.split("-");
+        upcomingHolidayName =
+          isLocal === "true" ? upcomingHoliday.localName : upcomingHoliday.name;
+        upcomingHolidayTime = Date.UTC(date[0], date[1] - 1, date[2], 0, 0, 0);
+        cName.innerHTML = upcomingHolidayName;
+        cDate.innerHTML = `(${upcomingHoliday.date.replaceAll("-", "/")})`;
+      } else year++;
+      }
+    }
+    
+  if (holidays.length === 0 || holidays === null)
+    console.error("Error fetching holidays");
   }
 }
 
@@ -168,8 +171,6 @@ async function fetchTime() {
         let time = await response.json();
         currDate = new Date(time.dateTime + "Z");
         currTime = currDate.getTime();
-        console.log(`\nFetched Time`);
-        console.log(currDate.toISOString());
       } catch (error) {
         console.error("Error fetching time", error);
       }
@@ -181,8 +182,6 @@ async function fetchTime() {
       let time = await response.json();
       currDate = new Date(time.dateTime + "Z");
       currTime = currDate.getTime() + offset;
-      console.log(`\nFetched Time`);
-      console.log(currDate.toISOString());
     } catch (error) {
       console.error("Error fetching time", error);
     }
@@ -361,7 +360,6 @@ async function startCountdown() {
   upcomingHoliday = null;
   holidays = null;
   await fetchUserIP();
-  await fetchCountries();
   await updateCountry();
   await fetchTime();
   await fetchHolidays(currDate.getFullYear());
