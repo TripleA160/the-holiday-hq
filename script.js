@@ -1,5 +1,5 @@
 /*
-=> add code to deal with other holidays date
+=> Change UI
 */
 
 import {
@@ -322,8 +322,8 @@ async function updateHolidayList() {
     if (upcomingHoliday && upcomingHolidayName === hName) hItem.setUpcoming();
   }
   if (isLocal === "true" && isRTL(holidays[0].localName))
-    holidayList.element.style.flexDirection = "row-reverse";
-  else holidayList.element.style.flexDirection = "row";
+    holidayList.element.style.direction = "rtl";
+  else holidayList.element.style.direction = "ltr";
 }
 
 function updateCounter() {
