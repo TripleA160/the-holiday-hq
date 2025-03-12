@@ -6,12 +6,18 @@ This project aims to provide users an easy way to track holidays worldwide with 
 
 - **Live Countdown:** Displays a countdown to the upcoming holiday.
 - **Holiday List:** Displays a list of all holidays for the desired country with their names and dates.
-- **Customizable Settings:** - Choose any country from a total of 121 supported country. - Use between your local timezone or choose from selected country's timezones. - Toggle between English and local names for holidays.
+- **Customizable Settings:**
+  - Choose any country from a total of 121 supported country.
+  - Use between your local timezone or choose from selected country's timezones.
+  - Toggle between English and local names for holidays.
 
 ## Technologies Used
 
 - **Frontend:** HTML, CSS, JavaScript
-- **APIs:** - Nager.Date API for holiday data. - TimeAPI for time zone and current time data. - IPAPI for user location.
+- **APIs:**
+  - Nager.Date API for holiday data.
+  - TimeAPI for time zone and current time data.
+  - IPAPI for user location.
 
 ## License
 
