@@ -1,7 +1,3 @@
-/*
-=> Change UI
-*/
-
 import {
   DropdownMenu,
   DropdownItem,
@@ -42,8 +38,8 @@ const cDays = countdown.querySelector(".digit-days");
 const cHours = countdown.querySelector(".digit-hours");
 const cMinutes = countdown.querySelector(".digit-minutes");
 const cSeconds = countdown.querySelector(".digit-seconds");
-const cName = countdown.querySelector(".countdown-name");
-const cDate = countdown.querySelector(".countdown-date");
+const cName = countdown.querySelector(".countdown-label-name");
+const cDate = countdown.querySelector(".countdown-label-date");
 
 let isLocal = localStorage.getItem("isLocal");
 let isCountryTime = localStorage.getItem("isCountryTime");

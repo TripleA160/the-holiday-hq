@@ -1,0 +1,152 @@
+@media (min-width: 320px) {
+  .digit-number,
+  .digit-separator {
+    font-size: 38px;
+  }
+  .digit-label {
+    font-size: 12px;
+  }
+  .countdown-label-name {
+    font-size: 36px;
+  }
+  .countdown-label-date {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 375px) {
+  .digit-number,
+  .digit-separator {
+    font-size: 40px;
+  }
+  .digit-label {
+    font-size: 14px;
+  }
+  .countdown-label-name {
+    font-size: 38px;
+  }
+  .countdown-label-date {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 400px) {
+  .digit-number,
+  .digit-separator {
+    font-size: 46px;
+  }
+  .digit-label {
+    font-size: 18px;
+  }
+  .countdown-label-name {
+    font-size: 46px;
+  }
+  .countdown-label-date {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .region-settings {
+    left: 0px;
+    top: 40px;
+  }
+  #content {
+    gap: 32px;
+  }
+  .countdown {
+    margin-top: 64px;
+  }
+  .holidays-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    font-size: 14px;
+  }
+  .holidays-item-name,
+  .holidays-item-date {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .region-settings {
+    left: 40px;
+    top: 0px;
+  }
+  #content {
+    gap: 64px;
+  }
+  .countdown {
+    margin-top: 0px;
+  }
+  .digit-number,
+  .digit-separator {
+    font-size: 64px;
+  }
+  .digit-label {
+    font-size: 24px;
+  }
+  .countdown-label-name {
+    font-size: 64px;
+  }
+  .countdown-label-date {
+    font-size: 48px;
+  }
+  .holidays-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    font-size: 16px;
+  }
+  .holidays-item-name,
+  .holidays-item-date {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .digit-number,
+  .digit-separator {
+    font-size: 84px;
+  }
+  .digit-label {
+    font-size: 28px;
+  }
+  .countdown-label-name {
+    font-size: 80px;
+  }
+  .countdown-label-date {
+    font-size: 60px;
+  }
+  .holidays-list {
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 18px;
+  }
+  .holidays-item-name,
+  .holidays-item-date {
+    width: 220px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .digit-number,
+  .digit-separator {
+    font-size: 96px;
+  }
+  .digit-label {
+    font-size: 32px;
+  }
+  .countdown-label-name {
+    font-size: 86px;
+  }
+  .countdown-label-date {
+    font-size: 64px;
+  }
+  .holidays-list {
+    gap: 32px;
+    font-size: 20px;
+  }
+  .holidays-item-name,
+  .holidays-item-date {
+    width: 270px;
+  }
+}
