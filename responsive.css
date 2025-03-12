@@ -1,4 +1,16 @@
 @media (min-width: 320px) {
+  .country-ddn {
+    font-size: 15px;
+  }
+  .time-zone-ddn {
+    font-size: 12.5px;
+  }
+  .time-zone-toggle-label {
+    font-size: 12px;
+  }
+  .time-zone-toggle-checkbox {
+    font-size: 15px;
+  }
   .digit-number,
   .digit-separator {
     font-size: 38px;
@@ -15,6 +27,18 @@
 }
 
 @media (min-width: 375px) {
+  .country-ddn {
+    font-size: 16px;
+  }
+  .time-zone-ddn {
+    font-size: 13px;
+  }
+  .time-zone-toggle-label {
+    font-size: 13px;
+  }
+  .time-zone-toggle-checkbox {
+    font-size: 16px;
+  }
   .digit-number,
   .digit-separator {
     font-size: 40px;
@@ -47,6 +71,18 @@
 }
 
 @media (max-width: 767px) {
+  .ddn-btn {
+    cursor: default;
+  }
+  .ddn-menu {
+    cursor: default;
+  }
+  .region-settings-btn {
+    cursor: default;
+  }
+  .language-switch-btn {
+    cursor: default;
+  }
   .region-settings {
     left: 0px;
     top: 40px;
@@ -69,6 +105,30 @@
 }
 
 @media (min-width: 768px) {
+  .ddn-btn {
+    cursor: pointer;
+  }
+  .ddn-menu {
+    cursor: pointer;
+  }
+  .region-settings-btn {
+    cursor: pointer;
+  }
+  .language-switch-btn {
+    cursor: pointer;
+  }
+  .country-ddn {
+    font-size: 18px;
+  }
+  .time-zone-ddn {
+    font-size: 15.5px;
+  }
+  .time-zone-toggle-label {
+    font-size: 15.5px;
+  }
+  .time-zone-toggle-checkbox {
+    font-size: 20px;
+  }
   .region-settings {
     left: 40px;
     top: 0px;

@@ -47,7 +47,7 @@ i {
 .ddn {
   position: relative;
   font-size: 18px;
-  width: 270px;
+  min-width: 150px;
   max-width: 100%;
 }
 .ddn-btn {
@@ -57,7 +57,8 @@ i {
   align-items: center;
   justify-content: space-between;
   width: inherit;
-  max-width: 100%;
+  min-width: inherit;
+  max-width: inherit;
   height: 55px;
   padding: 0.6em;
   font: inherit;
@@ -95,6 +96,7 @@ i {
   background-color: var(--bg-third);
   border-radius: 8px;
   width: inherit;
+  min-width: inherit;
   max-width: 100%;
   max-height: 400px;
   overflow-y: auto;
@@ -192,8 +194,8 @@ i {
 .time-zone-ddn {
   z-index: 98;
   top: 65px;
-  left: 170px;
-  width: 170px;
+  left: 50%;
+  min-width: 50%;
   font-size: 15.5px;
   animation: reveal 0.14s var(--timing-function-fast-in-slow-out) forwards;
 }
@@ -201,6 +203,7 @@ i {
   position: absolute;
   z-index: 0;
   top: calc(100% - 10px - 10px - 27.5px);
+  width: 50%;
   display: flex;
   align-items: center;
 }

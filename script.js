@@ -82,8 +82,6 @@ async function fetchUserIP() {
 
     await updateCountryDropdown();
 
-    console.log(`\nFetched IP`);
-    console.log(userIP + "\n" + userCountry);
   } catch (error) {
     console.error("Error fetching IP address,\nCountry time will be used", error);
   }
