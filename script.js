@@ -160,21 +160,36 @@ async function fetchTime() {
   if (isCountryTime === "false" && userIP != null) {
     try {
         let response = await fetch(
-          `https://timeapi.io/api/time/current/ip?ipAddress=${userIP}`
+          `https://time.now/developer/api/ip/${userIP}`
         );
         let time = await response.json();
-        currDate = new Date(time.dateTime + "Z");
-        currTime = currDate.getTime();
+        const iso = time.datetime;
+
+        // parse API offset
+        const m = iso.match(/([+-])(\d{2}):(\d{2})$/);
+        let apiOffsetMs = 0;
+        if (m) {
+          apiOffsetMs = (parseInt(m[2], 10) * 60 + parseInt(m[3], 10)) * 60 * 1000;
+          if (m[1] === "-") apiOffsetMs = -apiOffsetMs;
+        }
+
+        currDate = new Date(iso);
+
+        // shift UTC by offset
+        currTime = currDate.getTime() + apiOffsetMs;
+        offset = apiOffsetMs;
       } catch (error) {
         console.error("Error fetching time", error);
       }
   } else {
     try {
       let response = await fetch(
-        `https://timeapi.io/api/time/current/zone?timeZone=GMT`
+        `https://time.now/developer/api/timezone/GMT`
       );
       let time = await response.json();
-      currDate = new Date(time.dateTime + "Z");
+      currDate = new Date(time.utc_datetime);
+      
+      // shift UTC by country offset
       currTime = currDate.getTime() + offset;
     } catch (error) {
       console.error("Error fetching time", error);
