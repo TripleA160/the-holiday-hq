@@ -26,5 +26,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 
 - [Nager.Date](https://date.nager.at/) for providing the holiday data API.
-- [TimeAPI](https://timeapi.io/) for providing current time data API.
+- [Time.Now](https://time.now) for providing current time data API.
 - [IPAPI](https://ipapi.is/) for providing user location data API.
